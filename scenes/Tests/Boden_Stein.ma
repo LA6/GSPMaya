@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Boden_Stein.ma
-//Last modified: Tue, Jan 15, 2019 04:31:49 PM
+//Last modified: Tue, Jan 22, 2019 02:50:00 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "8FC1EA70-4652-1A46-567A-ED9B0AC2F3D4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.66548352992311111 6.9506149316274026 -11.191541077991513 ;
-	setAttr ".r" -type "double3" -54.938352729465599 174.59999999991015 0 ;
+	setAttr ".t" -type "double3" -7.5578906247042958 7.7465881983958615 -17.563720183762833 ;
+	setAttr ".r" -type "double3" -47.138352729400744 176.99999999986687 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B89D5FEA-4469-6DC4-2F47-80B192E7EDBC";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 9.9776617029251522;
+	setAttr ".coi" 14.525934224142468;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1127,20 +1127,498 @@ createNode mesh -n "EShape2" -p "E2";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".dnp" yes;
 	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Boden2:group9";
+	rename -uid "91DFF220-4A0A-11C5-C9E8-9095B5A79636";
+	setAttr ".t" -type "double3" -3.5 0 0 ;
+	setAttr ".rp" -type "double3" -5 0 0 ;
+	setAttr ".sp" -type "double3" -5 0 0 ;
+createNode transform -n "Boden2:pasted__pCube4" -p "Boden2:group9";
+	rename -uid "099CCE91-4ED2-8909-6989-F5AEBB7AD42F";
+	setAttr ".t" -type "double3" 8 0 0 ;
+	setAttr ".s" -type "double3" 5 0.1 5 ;
+createNode transform -n "Boden2:transform7" -p "Boden2:pasted__pCube4";
+	rename -uid "408D63D7-4786-2AAC-7BCF-80B228408C45";
+	setAttr ".v" no;
+createNode mesh -n "Boden2:pasted__pCubeShape4" -p "Boden2:transform7";
+	rename -uid "F64FFC07-45C7-3403-8783-F1A3C929D2B6";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Boden2:group10";
+	rename -uid "BCAC3911-4D04-2347-574B-0D9510285E91";
+	setAttr ".rp" -type "double3" 2.9802322382144197e-07 0.05 -1.0000000000000002 ;
+	setAttr ".sp" -type "double3" 2.9802322382144197e-07 0.05 -1.0000000000000002 ;
+createNode transform -n "Boden2:pasted__group8" -p "Boden2:group10";
+	rename -uid "F171AE63-4346-907C-9877-758CC350413A";
+	setAttr ".rp" -type "double3" 2.9802322476513154e-07 0.05 -5 ;
+	setAttr ".sp" -type "double3" 2.9802322476513154e-07 0.05 -5 ;
+createNode transform -n "Boden2:pasted__pasted__group5" -p "Boden2:pasted__group8";
+	rename -uid "6A0FCDA6-48BE-0C89-9B6A-73BF0EDEC2E0";
+	setAttr ".t" -type "double3" 1 0 -1 ;
+	setAttr ".r" -type "double3" 0 90 0 ;
+	setAttr ".rp" -type "double3" 0 0.025 0 ;
+	setAttr ".sp" -type "double3" 0 0.025 0 ;
+createNode transform -n "Boden2:pasted__pasted__pasted__group2" -p "Boden2:pasted__pasted__group5";
+	rename -uid "C5D2A8C0-47D9-7E8C-BF2D-3FBAB852C28A";
+	setAttr ".rp" -type "double3" 0 0.025 0 ;
+	setAttr ".sp" -type "double3" 0 0.025 0 ;
+createNode transform -n "Boden2:pasted__pasted__pasted__pasted__pCube3" -p "Boden2:pasted__pasted__pasted__group2";
+	rename -uid "2554B7D4-4381-8995-3812-29BB87CB0E25";
+	setAttr ".t" -type "double3" -2 0.05 2.5 ;
+	setAttr ".s" -type "double3" 1 0.1 1 ;
+createNode transform -n "Boden2:transform9" -p "Boden2:pasted__pasted__pasted__pasted__pCube3";
+	rename -uid "50BD62D3-4728-B947-1FEB-7A9027806D23";
+	setAttr ".v" no;
+createNode mesh -n "Boden2:pasted__pasted__pasted__pasted__pCubeShape3" -p "Boden2:transform9";
+	rename -uid "4CEA767B-4999-5F91-CB78-7F9C5167C545";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt[2:5]" -type "float3"  0 0 5.6624413e-07 0 0 5.6624413e-07 
+		0 0 2.9802322e-08 0 0 2.9802322e-08;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Boden2:group11";
+	rename -uid "AFFB7EAE-4D20-5E02-F76B-B4A7360475D3";
+	setAttr ".rp" -type "double3" 3.5000002980232239 0.05 -0.99999999999999944 ;
+	setAttr ".sp" -type "double3" 3.5000002980232239 0.05 -0.99999999999999944 ;
+createNode transform -n "Boden2:pasted__group10" -p "Boden2:group11";
+	rename -uid "A84199E6-4CC8-E90D-BFA8-9DAD8FD9B25C";
+	setAttr ".rp" -type "double3" 2.9802322382144197e-07 0.05 -1.0000000000000002 ;
+	setAttr ".sp" -type "double3" 2.9802322382144197e-07 0.05 -1.0000000000000002 ;
+createNode transform -n "Boden2:pasted__pasted__group8" -p "|Boden2:group11|Boden2:pasted__group10";
+	rename -uid "C14A65E3-4D63-915A-D5F7-199424DB5A2F";
+	setAttr ".rp" -type "double3" 2.9802322476513154e-07 0.05 -5 ;
+	setAttr ".sp" -type "double3" 2.9802322476513154e-07 0.05 -5 ;
+createNode transform -n "Boden2:pasted__pasted__pasted__group5" -p "|Boden2:group11|Boden2:pasted__group10|Boden2:pasted__pasted__group8";
+	rename -uid "B58EB777-41E3-988F-A173-86AFEB033F67";
+	setAttr ".t" -type "double3" 1 0 -1 ;
+	setAttr ".r" -type "double3" 0 90 0 ;
+	setAttr ".rp" -type "double3" 0 0.025 0 ;
+	setAttr ".sp" -type "double3" 0 0.025 0 ;
+createNode transform -n "Boden2:pasted__pasted__pasted__pasted__group2" -p "|Boden2:group11|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5";
+	rename -uid "A14353DA-4077-227F-248C-E88EB665EB40";
+	setAttr ".rp" -type "double3" 0 0.025 0 ;
+	setAttr ".sp" -type "double3" 0 0.025 0 ;
+createNode transform -n "Boden2:pasted__pasted__pasted__pasted__pasted__pCube3" -p
+		 "|Boden2:group11|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2";
+	rename -uid "3A121A02-465D-989E-29BE-8F8C976E2857";
+	setAttr ".t" -type "double3" 0 0.05 2.5 ;
+	setAttr ".s" -type "double3" 1 0.1 1 ;
+createNode transform -n "Boden2:transform8" -p "|Boden2:group11|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3";
+	rename -uid "284A95EA-4A38-59A8-6009-FE82453985EF";
+	setAttr ".v" no;
+createNode mesh -n "Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3" -p
+		 "Boden2:transform8";
+	rename -uid "8334B72A-4360-D5DF-E2DE-3489840921B5";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt[2:5]" -type "float3"  0 0 5.6624413e-07 0 0 5.6624413e-07 
+		0 0 2.9802322e-08 0 0 2.9802322e-08;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Boden2:group12";
+	rename -uid "12182A6E-4C9A-9B3D-3C8D-DF803383C22C";
+	setAttr ".rp" -type "double3" 3.5000002980232239 0.05 5.5511151231257827e-16 ;
+	setAttr ".sp" -type "double3" 3.5000002980232239 0.05 5.5511151231257827e-16 ;
+createNode transform -n "Boden2:pasted__group10" -p "Boden2:group12";
+	rename -uid "A2F0A618-4998-B2AB-C480-86A23D69D8E2";
+	setAttr ".rp" -type "double3" 2.9802322382144197e-07 0.05 -1.0000000000000002 ;
+	setAttr ".sp" -type "double3" 2.9802322382144197e-07 0.05 -1.0000000000000002 ;
+createNode transform -n "Boden2:pasted__pasted__group8" -p "|Boden2:group12|Boden2:pasted__group10";
+	rename -uid "DE26556C-46FB-F95A-C618-5890542C4B34";
+	setAttr ".rp" -type "double3" 2.9802322476513154e-07 0.05 -5 ;
+	setAttr ".sp" -type "double3" 2.9802322476513154e-07 0.05 -5 ;
+createNode transform -n "Boden2:pasted__pasted__pasted__group5" -p "|Boden2:group12|Boden2:pasted__group10|Boden2:pasted__pasted__group8";
+	rename -uid "075A0A8C-4E5B-DFC9-E484-1BB9D7544371";
+	setAttr ".t" -type "double3" 1 0 -1 ;
+	setAttr ".r" -type "double3" 0 90 0 ;
+	setAttr ".rp" -type "double3" 0 0.025 0 ;
+	setAttr ".sp" -type "double3" 0 0.025 0 ;
+createNode transform -n "Boden2:pasted__pasted__pasted__pasted__group2" -p "|Boden2:group12|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5";
+	rename -uid "BEB9B27A-49B4-0311-B499-A0B616EEE1E3";
+	setAttr ".rp" -type "double3" 0 0.025 0 ;
+	setAttr ".sp" -type "double3" 0 0.025 0 ;
+createNode transform -n "Boden2:pasted__pasted__pasted__pasted__pasted__pCube3" -p
+		 "|Boden2:group12|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2";
+	rename -uid "075C1466-4AD6-E038-2E31-8FB300E4EAD2";
+	setAttr ".t" -type "double3" -2 0.05 4.5 ;
+	setAttr ".s" -type "double3" 1 0.1 1 ;
+createNode transform -n "Boden2:transform10" -p "|Boden2:group12|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3";
+	rename -uid "127A9370-4F78-F41C-47E9-0999412847D9";
+	setAttr ".v" no;
+createNode mesh -n "Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3" -p
+		 "Boden2:transform10";
+	rename -uid "A0F97060-4992-7833-7333-4684B9E65B5A";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt[2:5]" -type "float3"  0 0 5.6624413e-07 0 0 5.6624413e-07 
+		0 0 2.9802322e-08 0 0 2.9802322e-08;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Boden2:pasted__group11" -p "Boden2:group12";
+	rename -uid "8298468D-44F5-92EB-A6AF-D89223B8651C";
+	setAttr ".rp" -type "double3" 3.5000002980232239 0.05 -0.99999999999999944 ;
+	setAttr ".sp" -type "double3" 3.5000002980232239 0.05 -0.99999999999999944 ;
+createNode transform -n "Boden2:pasted__pasted__group10" -p "Boden2:pasted__group11";
+	rename -uid "70276041-47B3-30B7-0435-8695492A3411";
+	setAttr ".rp" -type "double3" 2.9802322382144197e-07 0.05 -1.0000000000000002 ;
+	setAttr ".sp" -type "double3" 2.9802322382144197e-07 0.05 -1.0000000000000002 ;
+createNode transform -n "Boden2:pasted__pasted__pasted__group8" -p "Boden2:pasted__pasted__group10";
+	rename -uid "DA3506DA-4289-DE6D-117F-3E838F43F373";
+	setAttr ".rp" -type "double3" 2.9802322476513154e-07 0.05 -5 ;
+	setAttr ".sp" -type "double3" 2.9802322476513154e-07 0.05 -5 ;
+createNode transform -n "Boden2:pasted__pasted__pasted__pasted__group5" -p "Boden2:pasted__pasted__pasted__group8";
+	rename -uid "384164B6-48A9-7340-0B41-74AB51B87292";
+	setAttr ".t" -type "double3" 1 0 -1 ;
+	setAttr ".r" -type "double3" 0 90 0 ;
+	setAttr ".rp" -type "double3" 0 0.025 0 ;
+	setAttr ".sp" -type "double3" 0 0.025 0 ;
+createNode transform -n "Boden2:pasted__pasted__pasted__pasted__pasted__group2" -p
+		 "Boden2:pasted__pasted__pasted__pasted__group5";
+	rename -uid "223ADC49-49BE-E08B-D200-D29C368A9FD1";
+	setAttr ".rp" -type "double3" 0 0.025 0 ;
+	setAttr ".sp" -type "double3" 0 0.025 0 ;
+createNode transform -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3" 
+		-p "Boden2:pasted__pasted__pasted__pasted__pasted__group2";
+	rename -uid "16F345B4-4923-C310-5EDE-4E92162691B9";
+	setAttr ".t" -type "double3" 0 0.05 4.5 ;
+	setAttr ".s" -type "double3" 1 0.1 1 ;
+createNode transform -n "Boden2:transform11" -p "|Boden2:group12|Boden2:pasted__group11|Boden2:pasted__pasted__group10|Boden2:pasted__pasted__pasted__group8|Boden2:pasted__pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3";
+	rename -uid "30B76FA7-43E8-1F53-449D-878D67240689";
+	setAttr ".v" no;
+createNode mesh -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape3" 
+		-p "Boden2:transform11";
+	rename -uid "235C4DAE-44FA-6FC1-B9EF-55807F5109BB";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt[2:5]" -type "float3"  0 0 5.6624413e-07 0 0 5.6624413e-07 
+		0 0 2.9802322e-08 0 0 2.9802322e-08;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3";
+	rename -uid "E7B4626B-405E-BBA1-21C1-E8B776EC5B52";
+	setAttr ".t" -type "double3" -11.695545960049767 0 -6.6879173068147333 ;
+	setAttr ".rp" -type "double3" 4.5 0.025 0 ;
+	setAttr ".sp" -type "double3" 4.5 0.025 0 ;
+createNode transform -n "Stein_Ecke2:transform12" -p "|Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3";
+	rename -uid "20408DDD-4F69-ADCF-76EB-FCB34FDB152A";
+	setAttr ".v" no;
+createNode mesh -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape" 
+		-p "Stein_Ecke2:transform12";
+	rename -uid "F626B136-4AC5-ED0A-0173-9DB10DE99496";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 12 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Stein_Ecke1:group4";
+	rename -uid "53828970-4492-370A-7721-619A265505A4";
+	setAttr ".t" -type "double3" -5 0 4 ;
+	setAttr ".rp" -type "double3" 4 1 -4 ;
+	setAttr ".sp" -type "double3" 4 1 -4 ;
+createNode transform -n "Stein_Ecke1:pasted__Wall" -p "Stein_Ecke1:group4";
+	rename -uid "5154579B-4F80-FF26-1834-CEAE513AF5CC";
+	setAttr ".t" -type "double3" 2.5 1 -3.75 ;
+	setAttr ".r" -type "double3" 0 90 0 ;
+	setAttr ".s" -type "double3" 0.5 2 2.5 ;
+createNode transform -n "Stein_Ecke1:transform3" -p "Stein_Ecke1:pasted__Wall";
+	rename -uid "4DE9CB1A-4329-489A-3224-C3AEA1D31D06";
+	setAttr ".v" no;
+createNode mesh -n "Stein_Ecke1:pasted__WallShape" -p "Stein_Ecke1:transform3";
+	rename -uid "D4BF8F8C-41EC-D45C-21A1-3CA632CB2567";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dnp" yes;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Stein_Ecke1:group5";
+	rename -uid "45700E62-43D5-0614-D9B0-4E93C5ABCC76";
+	setAttr ".rp" -type "double3" -1 1 0 ;
+	setAttr ".sp" -type "double3" -1 1 0 ;
+createNode transform -n "Stein_Ecke1:pasted__group4" -p "Stein_Ecke1:group5";
+	rename -uid "7CF596D3-445C-5ED1-EEA7-ECA03230B550";
+	setAttr ".t" -type "double3" -5 0 4 ;
+	setAttr ".rp" -type "double3" 4 1 -4 ;
+	setAttr ".sp" -type "double3" 4 1 -4 ;
+createNode transform -n "Stein_Ecke1:pasted__pasted__Wall" -p "Stein_Ecke1:pasted__group4";
+	rename -uid "7F4C5883-4BCB-4542-4953-5E9F0B3BA7FF";
+	setAttr ".t" -type "double3" 4 1 -5 ;
+	setAttr ".s" -type "double3" 0.5 2 3 ;
+createNode transform -n "Stein_Ecke1:transform4" -p "Stein_Ecke1:pasted__pasted__Wall";
+	rename -uid "F4D59AA5-423D-A74C-DC67-698D5BDB95E7";
+	setAttr ".v" no;
+createNode mesh -n "Stein_Ecke1:pasted__pasted__WallShape" -p "Stein_Ecke1:transform4";
+	rename -uid "024F6DCE-46B8-5518-AA74-8FAAC3C231B6";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dnp" yes;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Stein_Ecke2:group12";
+	rename -uid "D4B0E7BD-410C-5BBE-3DA4-CA91F3176F40";
+	setAttr ".t" -type "double3" 4.6928527773676301 0 -3.9179613528988231 ;
+	setAttr ".rp" -type "double3" 4 1 -4 ;
+	setAttr ".sp" -type "double3" 4 1 -4 ;
+createNode transform -n "Stein_Ecke2:pasted__Wand_Stein" -p "Stein_Ecke2:group12";
+	rename -uid "974FAA12-42B2-07BF-8BC0-86BDA400DD83";
+	setAttr ".t" -type "double3" 4 1 -6.3215409737624295 ;
+	setAttr ".s" -type "double3" 0.5 2 5 ;
+createNode transform -n "Stein_Ecke2:transform9" -p "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein";
+	rename -uid "2B929C0D-4684-D819-802E-A4BED3CE832A";
+	setAttr ".v" no;
+createNode mesh -n "Stein_Ecke2:pasted__Wand_SteinShape" -p "Stein_Ecke2:transform9";
+	rename -uid "43AC92C9-4AFB-FF2F-1155-67A87A1539C0";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dnp" yes;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Stein_Ecke2:group13";
+	rename -uid "D7B98290-4AF0-B125-1575-B8A52D33B87C";
+	setAttr ".t" -type "double3" 3.4581414512588271 0 -4.0037663541767419 ;
+	setAttr ".r" -type "double3" 0 90 0 ;
+	setAttr ".rp" -type "double3" 4 1 -4 ;
+	setAttr ".sp" -type "double3" 4 1 -4 ;
+createNode transform -n "Stein_Ecke2:pasted__Wand_Stein" -p "Stein_Ecke2:group13";
+	rename -uid "D4A5EC6B-4FD3-4FC4-C9EA-81A460906439";
+	setAttr ".t" -type "double3" 4 1 -5.0182368290205757 ;
+	setAttr ".s" -type "double3" 0.5 2 5 ;
+createNode transform -n "Stein_Ecke2:transform10" -p "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein";
+	rename -uid "6FA445B4-4F50-6BED-C921-F0B0FDDE17CC";
+	setAttr ".v" no;
+createNode mesh -n "Stein_Ecke2:pasted__Wand_SteinShape" -p "Stein_Ecke2:transform10";
+	rename -uid "FF73889F-4295-73D9-D960-23BAD0848965";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dnp" yes;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Stein_Ecke2:group13_pasted__Wand_Stein";
+	rename -uid "451D2D6C-49F9-3569-8863-9F81810EF18B";
+	setAttr ".t" -type "double3" -13.638860607507658 0 3.576054365101772 ;
+	setAttr ".rp" -type "double3" 6.4413786998029403 1 -10.239502326661253 ;
+	setAttr ".sp" -type "double3" 6.4413786998029403 1 -10.239502326661253 ;
+createNode transform -n "Stein_Ecke2:transform13" -p "Stein_Ecke2:group13_pasted__Wand_Stein";
+	rename -uid "2E712553-4CBC-078C-6D48-9296B9399C23";
+	setAttr ".v" no;
+createNode mesh -n "Stein_Ecke2:group13_pasted__Wand_SteinShape" -p "Stein_Ecke2:transform13";
+	rename -uid "AF45B1F1-4711-3FCC-E649-DCBBCDFFE020";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dnp" yes;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Stein_Ecke_Einzel:group14";
+	rename -uid "AD122304-4487-D366-D66D-9BAAF0E01768";
+	setAttr ".rp" -type "double3" 4 1 -4 ;
+	setAttr ".sp" -type "double3" 4 1 -4 ;
+createNode transform -n "Stein_Ecke_Einzel:pasted__Wand_Stein" -p "Stein_Ecke_Einzel:group14";
+	rename -uid "1CE381BD-42B0-ECBB-7D88-D88F104494AE";
+	setAttr ".t" -type "double3" -9.26 1 -5.75 ;
+	setAttr ".r" -type "double3" 0 90 0 ;
+	setAttr ".s" -type "double3" 0.5 2 5 ;
+createNode transform -n "Stein_Ecke_Einzel:transform11" -p "Stein_Ecke_Einzel:pasted__Wand_Stein";
+	rename -uid "049F7A3D-42D3-6DC4-93A9-D0BF3EEA198E";
+	setAttr ".v" no;
+createNode mesh -n "Stein_Ecke_Einzel:pasted__Wand_SteinShape" -p "Stein_Ecke_Einzel:transform11";
+	rename -uid "69F3E16D-448D-3F6E-B60C-D9B80A0CC761";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dnp" yes;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Stein_Ecke_Einzel:group15";
+	rename -uid "0C1377DE-4799-2639-05EE-1F8DAF1AD3EC";
+	setAttr ".rp" -type "double3" -7 1 -8 ;
+	setAttr ".sp" -type "double3" -7 1 -8 ;
+createNode transform -n "Stein_Ecke_Einzel:pasted__group14" -p "Stein_Ecke_Einzel:group15";
+	rename -uid "ED590854-4048-EF69-A62F-ACBFEE7811E1";
+	setAttr ".rp" -type "double3" 4 1 -4 ;
+	setAttr ".sp" -type "double3" 4 1 -4 ;
+createNode transform -n "Stein_Ecke_Einzel:pasted__pasted__Wand_Stein" -p "Stein_Ecke_Einzel:pasted__group14";
+	rename -uid "CA0D4BB8-489F-B356-C14B-3196B23F7B49";
+	setAttr ".t" -type "double3" -7 1 -8 ;
+	setAttr ".s" -type "double3" 0.5 2 5 ;
+createNode transform -n "Stein_Ecke_Einzel:transform12" -p "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein";
+	rename -uid "B370F46D-4D26-79A0-A175-88BB16C48EA4";
+	setAttr ".v" no;
+createNode mesh -n "Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape" -p "Stein_Ecke_Einzel:transform12";
+	rename -uid "29688CDE-4B0B-28B1-BD2D-2BA011FA0002";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dnp" yes;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Stein_Ecke_Einzel:pasted__pasted__Wand_Stein";
+	rename -uid "EBB21BCE-43A2-7701-7034-DC98F9F37BC7";
+	setAttr ".t" -type "double3" -2.4447590883023089 0 -3.1912773763905644 ;
+	setAttr ".rp" -type "double3" -7.005000114440918 1 -5.75 ;
+	setAttr ".sp" -type "double3" -7.005000114440918 1 -5.75 ;
+createNode transform -n "Stein_Ecke2:transform11" -p "|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein";
+	rename -uid "4D646DDB-4994-BCC2-A938-77B062ACB99E";
+	setAttr ".v" no;
+createNode mesh -n "Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape" -p "Stein_Ecke2:transform11";
+	rename -uid "84FBB898-441C-811A-A8CF-03836F384B62";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "E3";
+	rename -uid "2079D047-476F-CAAA-352F-CCAF1DB716B3";
+	setAttr ".rp" -type "double3" -7.1972509388843031 0.97499999962747097 -6.6773624822068962 ;
+	setAttr ".sp" -type "double3" -7.1972509388843031 0.97499999962747097 -6.6773624822068962 ;
+createNode mesh -n "EShape3" -p "E3";
+	rename -uid "324BA140-45B8-6DD8-B915-128C3B6A1897";
+	setAttr -k off ".v";
+	setAttr -s 20 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999992549419403 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dnp" yes;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "group5";
+	rename -uid "AD25C810-4F15-5CFD-87FF-6FA25B667386";
+	setAttr ".t" -type "double3" -6.9394482052899109 0.15739809981267738 -1.6800319682344078 ;
+	setAttr ".s" -type "double3" 1.1111331124926942 1 1 ;
+	setAttr ".rp" -type "double3" -0.5 0 -5 ;
+	setAttr ".sp" -type "double3" -0.5 0 -5 ;
+createNode transform -n "pasted__E1" -p "group5";
+	rename -uid "B8F88591-4BDA-B9D8-0538-56B7DF0BC7AC";
+	setAttr ".t" -type "double3" -0.48193935355119849 -0.15556826407023958 -5.2631673063441857 ;
+	setAttr ".s" -type "double3" 4 1 4.5 ;
+createNode mesh -n "pasted__EShape1" -p "pasted__E1";
+	rename -uid "61FD202E-432F-C95E-E917-86926F8CBE8A";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.05000000074505806 0.95000001788139343 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "E24A0CF6-4C6A-B9E6-5CC7-AA8B738BD049";
-	setAttr -s 29 ".lnk";
-	setAttr -s 29 ".slnk";
+	rename -uid "261868DB-4CBA-7733-0323-61A547348968";
+	setAttr -s 40 ".lnk";
+	setAttr -s 40 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "934C6825-4877-4FE6-CC1D-BD84BF0B18E7";
+	rename -uid "34AC270F-4954-239C-CC78-48A75D22EAD9";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "3928827C-40B2-7E2D-24A4-FE9F0E73A148";
+	rename -uid "3D3A41CD-4454-1A56-4FF0-6592CF37EA64";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "FE6982AD-4E33-6F8E-3680-9C9C9CDB36DF";
+	rename -uid "F86F8EEB-4085-CC42-D227-EC987D2E4395";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "7A22E185-4383-5EAA-E07B-CE805DA32C7E";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8B0CCF46-4FEB-B11F-7C4B-0AA8AADAD59F";
+	rename -uid "48E778D7-48C2-11AC-EC33-5784B254AB8A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E87E286B-43C4-9E66-261B-C3B897A99261";
 	setAttr ".g" yes;
@@ -2117,7 +2595,6 @@ createNode place2dTexture -n "Boden_Ecke2:pasted__place2dTexture18";
 	rename -uid "A212E8A4-4046-D8F0-A2D3-51A127C46B1B";
 createNode bump2d -n "Boden_Ecke2:pasted__bump2d4";
 	rename -uid "6E2A9895-4CF9-1C9E-70B5-F4A1A052AEB5";
-	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "Boden_Ecke2:pasted__file19";
 	rename -uid "2DCFAB00-4494-7537-80F8-3DAA6D5B259A";
@@ -2431,7 +2908,6 @@ createNode place2dTexture -n "Boden_Ecke3:pasted__place2dTexture18";
 	rename -uid "A15DF7F1-4710-E619-6769-0BBCD42BB588";
 createNode bump2d -n "Boden_Ecke3:pasted__bump2d4";
 	rename -uid "FD69491F-4EB7-5EBB-AF4B-629F71FE85DB";
-	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "Boden_Ecke3:pasted__file19";
 	rename -uid "BA75E4A2-4989-E594-632D-E285B09EF9D5";
@@ -2637,8 +3113,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
 		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
 		+ "                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n"
-		+ "                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n"
-		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n"
+		+ "                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 639\\n    -height 536\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 639\\n    -height 536\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
@@ -2818,7 +3294,7 @@ createNode place2dTexture -n "Boden1:pasted__place2dTexture20";
 	rename -uid "C73ADCCF-42A3-FA34-2E46-C9B77B1169FA";
 createNode bump2d -n "Boden1:pasted__bump2d5";
 	rename -uid "213DBE32-43FD-CCE9-CD79-97884A26280E";
-	setAttr ".vc1" -type "float3" 0 2.9999999e-05 0 ;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "Boden1:pasted__file21";
 	rename -uid "2FFD3C93-420B-F064-760E-978D889FCD65";
@@ -2931,7 +3407,6 @@ createNode place2dTexture -n "Stein6:place2dTexture1";
 	rename -uid "DAA444B0-4E50-7884-A096-C891F28E0F4C";
 createNode bump2d -n "Stein6:bump2d1";
 	rename -uid "0F8BE4E1-41DE-EA32-D418-02AB38CFA650";
-	setAttr ".vc1" -type "float3" 0 2.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "Stein6:file2";
 	rename -uid "5E8930ED-4FAF-E9FA-A37B-A4AFD32B23A9";
@@ -3003,7 +3478,6 @@ createNode place2dTexture -n "Stein7:place2dTexture1";
 	rename -uid "AD5A8231-4CE7-8FE8-86A1-89998AAC9455";
 createNode bump2d -n "Stein7:bump2d1";
 	rename -uid "4AB7C24A-44CC-9A42-C964-74BDEA427EDD";
-	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "Stein7:file2";
 	rename -uid "B1613C67-488F-500F-5B28-92809CBCFEF9";
@@ -3098,6 +3572,825 @@ createNode groupParts -n "Stein6:groupParts10";
 	rename -uid "0B713BF3-4E64-FA76-07FB-6693E731F4F4";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[72:83]";
+createNode polyTriangulate -n "Boden2:polyTriangulate3";
+	rename -uid "7FC62E25-40B2-FAF2-AEFB-D597B546882F";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+createNode groupParts -n "Boden2:groupParts23";
+	rename -uid "3AC29729-46EB-D5EB-C8CA-179720443585";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[25]";
+createNode groupParts -n "Boden2:groupParts22";
+	rename -uid "3136EE50-4E7A-9256-310D-98B2522D8E60";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[24]" "f[26:29]";
+createNode groupParts -n "Boden2:groupParts21";
+	rename -uid "B7C352FC-48C4-3C3A-DC1E-63953436EAEA";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[18:23]";
+createNode groupParts -n "Boden2:groupParts20";
+	rename -uid "7E6A9BE1-4688-1827-A1C9-C398828581B9";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[12:17]";
+createNode groupParts -n "Boden2:groupParts19";
+	rename -uid "C4B47614-42B2-C066-CB63-F19E36B42CEC";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[6:11]";
+createNode groupParts -n "Boden2:groupParts18";
+	rename -uid "C11EA3B8-4692-1457-6C46-49B7D3E6F8A9";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:5]";
+createNode polyUnite -n "Boden2:polyUnite3";
+	rename -uid "22E4C596-44DC-0D29-1F2D-7FA74FD079AA";
+	setAttr -s 5 ".ip";
+	setAttr -s 5 ".im";
+createNode groupId -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__groupId13";
+	rename -uid "AC956DCD-4A5F-66E7-BD11-2788306A8825";
+	setAttr ".ihi" 0;
+createNode shadingEngine -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3";
+	rename -uid "AEB241D1-4355-B8B3-D495-189FC8427703";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 3 ".gn";
+createNode materialInfo -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__materialInfo9";
+	rename -uid "21BC9194-4B6D-4D29-172D-66A047751EF0";
+createNode lambert -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert10";
+	rename -uid "264C3C8E-47C5-DD13-CEE4-E6A4CAACD394";
+createNode file -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15";
+	rename -uid "826342B7-4D15-F39F-FD24-8A9AAE45A18D";
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/boden_pflaster_texture.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15";
+	rename -uid "1C9420F0-4429-366F-7D76-F4A95828849D";
+createNode groupParts -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__groupParts9";
+	rename -uid "B734D986-4B22-A519-1B7F-E0AEA2BC4CB3";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:5]";
+createNode polyCube -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__polyCube5";
+	rename -uid "B64B9790-4BA5-73F2-B3CD-22A4E2D2D642";
+	setAttr ".cuv" 4;
+createNode groupId -n "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__groupId14";
+	rename -uid "547F09FF-425D-DD38-2668-2684F9D4756E";
+	setAttr ".ihi" 0;
+createNode groupId -n "Boden2:pasted__pasted__pasted__pasted__pasted__groupId15";
+	rename -uid "133BF5DF-4576-C87A-3834-7CB436FED80D";
+	setAttr ".ihi" 0;
+createNode shadingEngine -n "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4";
+	rename -uid "E03F309A-4F8F-62A0-DBBD-75AB7BF81202";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 3 ".gn";
+createNode materialInfo -n "Boden2:pasted__pasted__pasted__pasted__pasted__materialInfo10";
+	rename -uid "1DD20EC6-41A2-2C72-EC49-8C8DF464CBD4";
+createNode lambert -n "Boden2:pasted__pasted__pasted__pasted__pasted__lambert11";
+	rename -uid "53C3458C-4F57-057F-FA16-579095D0FDF2";
+createNode file -n "Boden2:pasted__pasted__pasted__pasted__pasted__file16";
+	rename -uid "FCE6F198-4247-121A-5998-D996033825FF";
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/boden_pflaster_texture.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16";
+	rename -uid "99B0F5AA-4AF8-2847-ECA3-C5BB25818E10";
+createNode groupParts -n "Boden2:pasted__pasted__pasted__pasted__pasted__groupParts10";
+	rename -uid "E354BE87-4A7B-1129-C39F-55812B340127";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:5]";
+createNode polyCube -n "Boden2:pasted__pasted__pasted__pasted__pasted__polyCube6";
+	rename -uid "8A675F10-45D6-69E6-C3D7-97870E59D76B";
+	setAttr ".cuv" 4;
+createNode groupId -n "Boden2:pasted__pasted__pasted__pasted__pasted__groupId16";
+	rename -uid "0A28F96A-42D5-D96E-32DE-C9B68EB8C761";
+	setAttr ".ihi" 0;
+createNode groupId -n "Boden2:pasted__pasted__pasted__pasted__groupId13";
+	rename -uid "B86FE8EF-42E6-1981-D6E6-679CF323D55C";
+	setAttr ".ihi" 0;
+createNode shadingEngine -n "Boden2:pasted__pasted__pasted__pasted__lambert8SG3";
+	rename -uid "B6A28204-4AE0-2CF0-EE6C-02925B03A9D0";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 3 ".gn";
+createNode materialInfo -n "Boden2:pasted__pasted__pasted__pasted__materialInfo9";
+	rename -uid "0251645A-4E5E-A8F1-32D8-C18BC0017F9C";
+createNode lambert -n "Boden2:pasted__pasted__pasted__pasted__lambert10";
+	rename -uid "F26F0BEE-4220-ADA6-712E-D99308BBD632";
+createNode file -n "Boden2:pasted__pasted__pasted__pasted__file15";
+	rename -uid "01532536-45FF-6A68-1220-43BF912DDD83";
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/boden_pflaster_texture.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Boden2:pasted__pasted__pasted__pasted__place2dTexture15";
+	rename -uid "49B1DEE7-46F2-F28E-669C-9381752556EC";
+createNode groupParts -n "Boden2:pasted__pasted__pasted__pasted__groupParts9";
+	rename -uid "32B85A5C-451A-4C49-576B-73B88F634D42";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:5]";
+createNode polyCube -n "Boden2:pasted__pasted__pasted__pasted__polyCube5";
+	rename -uid "1128831B-4A18-E2DB-DBAE-B4B5451D03A7";
+	setAttr ".cuv" 4;
+createNode groupId -n "Boden2:pasted__pasted__pasted__pasted__groupId14";
+	rename -uid "D3E54D24-4421-9A33-7432-BD860A66A3A8";
+	setAttr ".ihi" 0;
+createNode groupId -n "Boden2:pasted__pasted__pasted__pasted__pasted__groupId13";
+	rename -uid "C4A42E69-464C-8DAD-5603-1EAF34B60FBD";
+	setAttr ".ihi" 0;
+createNode shadingEngine -n "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3";
+	rename -uid "B9E58192-4431-7BE6-4E98-FE92DE535DA5";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 3 ".gn";
+createNode materialInfo -n "Boden2:pasted__pasted__pasted__pasted__pasted__materialInfo9";
+	rename -uid "8F0401BC-4556-54AB-C7EC-F58BEEE79190";
+createNode lambert -n "Boden2:pasted__pasted__pasted__pasted__pasted__lambert10";
+	rename -uid "8861E3A5-4CC5-C7B6-550C-E2BFC7BFF003";
+createNode file -n "Boden2:pasted__pasted__pasted__pasted__pasted__file15";
+	rename -uid "7B1D9219-41F3-9183-F6D4-A5944A76B661";
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/boden_pflaster_texture.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15";
+	rename -uid "22C0C5D6-4A26-8A47-0506-B790296BC8FC";
+createNode groupParts -n "Boden2:pasted__pasted__pasted__pasted__pasted__groupParts9";
+	rename -uid "B0D6BA26-4F15-B290-72DA-1AB13A1E4E8B";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:5]";
+createNode polyCube -n "Boden2:pasted__pasted__pasted__pasted__pasted__polyCube5";
+	rename -uid "2D6D98F1-4DE6-E394-9FFF-4680DD755333";
+	setAttr ".cuv" 4;
+createNode groupId -n "Boden2:pasted__pasted__pasted__pasted__pasted__groupId14";
+	rename -uid "03782441-4422-DD56-C04D-5CAD89B3EFD6";
+	setAttr ".ihi" 0;
+createNode groupId -n "Boden2:pasted__groupId18";
+	rename -uid "893D23EA-4B9B-DCDA-4A69-3995A2F70011";
+	setAttr ".ihi" 0;
+createNode groupId -n "Boden2:pasted__groupId13";
+	rename -uid "770F69E4-4FE2-7909-1A19-06AF209C72BB";
+	setAttr ".ihi" 0;
+createNode shadingEngine -n "Boden2:pasted__lambert9SG2";
+	rename -uid "83A751B5-47BC-879F-4913-60AC67B16816";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 3 ".gn";
+createNode materialInfo -n "Boden2:pasted__materialInfo12";
+	rename -uid "5CFCCFF3-48F0-C0C9-7170-D0A468EA14BB";
+createNode lambert -n "Boden2:pasted__lambert13";
+	rename -uid "1AD02012-4CCD-330F-60B0-8192E18C6E42";
+createNode file -n "Boden2:pasted__file20";
+	rename -uid "84696C36-45A1-CAAB-14A3-C083B9DA606B";
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/rasen_echt_textur.JPG";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Boden2:pasted__place2dTexture20";
+	rename -uid "721C710B-4477-6282-F007-C7ABDEF50B50";
+createNode bump2d -n "Boden2:pasted__bump2d5";
+	rename -uid "78B61A50-49AC-3BA3-E61C-A6A4EF317376";
+	setAttr ".vc1" -type "float3" 0 2.9999999e-05 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Boden2:pasted__file21";
+	rename -uid "9AF7CD7A-469A-1C83-F2C0-6BA445720059";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/rasen_echt_textur.JPG";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Boden2:pasted__place2dTexture21";
+	rename -uid "0D028940-4215-CFFC-EFCB-E38C3A484F50";
+createNode polyAutoProj -n "Boden2:pasted__polyAutoProj2";
+	rename -uid "E69A77B4-471D-795F-5341-8999E795C82E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[1]";
+	setAttr ".ix" -type "matrix" 3 0 0 0 0 0.10000000000000001 0 0 0 0 5 0 0 0 0 1;
+	setAttr ".s" -type "double3" 5 5 5 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode groupParts -n "Boden2:pasted__groupParts9";
+	rename -uid "691AE4E8-4CF9-60AD-2A7D-0DAF730A8743";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[1]";
+createNode groupParts -n "Boden2:pasted__groupParts12";
+	rename -uid "9582F111-4AB5-88C7-A44B-1BAD9773D757";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[0]" "f[2:5]";
+	setAttr ".irc" -type "componentList" 1 "f[1]";
+createNode polyCube -n "Boden2:pasted__polyCube7";
+	rename -uid "CE09B749-47AE-2B06-0246-6B82C69DA060";
+	setAttr ".cuv" 4;
+createNode groupId -n "Boden2:pasted__groupId19";
+	rename -uid "8FD735D4-45CC-3CE6-13D1-9E9B05F9F00B";
+	setAttr ".ihi" 0;
+createNode groupId -n "Boden2:groupId22";
+	rename -uid "2B53E3DB-4F3D-4DC9-84AC-6C9CD44C1469";
+	setAttr ".ihi" 0;
+createNode groupId -n "Boden2:groupId23";
+	rename -uid "D9A9C6A5-4736-7398-F0A5-68907BCC2467";
+	setAttr ".ihi" 0;
+createNode groupId -n "Boden2:groupId24";
+	rename -uid "B7C5AA60-416D-16B5-3E5D-58BBC8B46381";
+	setAttr ".ihi" 0;
+createNode groupId -n "Boden2:groupId25";
+	rename -uid "0CDDE9FD-438E-A332-1E17-DE9384B3BE5B";
+	setAttr ".ihi" 0;
+createNode groupId -n "Boden2:groupId26";
+	rename -uid "9F5C8B55-4D80-A0D1-3039-AA9C39002879";
+	setAttr ".ihi" 0;
+createNode groupId -n "Boden2:groupId27";
+	rename -uid "6D5CCF3B-4132-E440-250E-3E9313A1CA32";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke1:groupParts5";
+	rename -uid "B33F6673-4783-E85C-DF9B-84A7136A0A89";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:5]";
+createNode polyPlanarProj -n "Stein_Ecke1:pasted__pasted__polyPlanarProj8";
+	rename -uid "167CAC1C-4F81-C8DA-3B7B-83B800EC3DA6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[1]" "f[3]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0 1 0 ;
+	setAttr ".ro" -type "double3" 90 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke1:pasted__pasted__polyPlanarProj7";
+	rename -uid "86732F20-4794-11ED-5814-0EA0F1594BBD";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[0]" "f[2]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0 1 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke1:pasted__pasted__polyPlanarProj6";
+	rename -uid "CDED8491-4426-DC9F-E11E-9FAABF433C2B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[5]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -0.25 1 0 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke1:pasted__pasted__polyPlanarProj5";
+	rename -uid "C306677D-4FBB-DBE5-F1F1-89B1945202B5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[4]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0.25 1 0 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyCube -n "Stein_Ecke1:pasted__pasted__polyCube2";
+	rename -uid "B001BEE4-4249-7957-FD00-BF9274048E8C";
+	setAttr ".cuv" 4;
+createNode groupId -n "Stein_Ecke1:groupId7";
+	rename -uid "6BE64520-4AFE-6837-9C83-1FAA4CA986F5";
+	setAttr ".ihi" 0;
+createNode shadingEngine -n "Stein_Ecke1:pasted__pasted__lambert2SG2";
+	rename -uid "F22FCD23-47A0-B64D-5E68-5C9DCF127C71";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
+createNode materialInfo -n "Stein_Ecke1:pasted__pasted__materialInfo3";
+	rename -uid "2DAF0EB1-4BE0-49F1-6572-21B2869376D9";
+createNode lambert -n "Stein_Ecke1:pasted__pasted__lambert4";
+	rename -uid "1796E8B6-43C2-C925-7172-49B6ECC05AA6";
+createNode file -n "Stein_Ecke1:pasted__pasted__file5";
+	rename -uid "83658215-491C-4463-0DE7-FD8CC730638F";
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/brick-wall-textures.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Stein_Ecke1:pasted__pasted__place2dTexture5";
+	rename -uid "EC2D0B60-4343-C57A-AD49-EC854D5D2D9B";
+createNode bump2d -n "Stein_Ecke1:pasted__pasted__bump2d3";
+	rename -uid "2BA26AA1-42C6-37C5-16DD-33887139313A";
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Stein_Ecke1:pasted__pasted__file6";
+	rename -uid "8968E8F3-452E-A0B7-ED72-32B2105495C4";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/brick-wall-textures.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Stein_Ecke1:pasted__pasted__place2dTexture6";
+	rename -uid "FC88D64C-4678-D1A6-3B76-5BAB0073DDC4";
+createNode groupId -n "Stein_Ecke1:groupId8";
+	rename -uid "4333A9C6-4925-8A8C-6B81-72B08992E0E6";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke1:groupParts6";
+	rename -uid "18C62BEF-4EEE-3693-5BE3-7B8737BE522B";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:5]";
+createNode polyPlanarProj -n "Stein_Ecke1:pasted__polyPlanarProj8";
+	rename -uid "4AF297CC-4C20-4277-A751-83ADEF892DC0";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[1]" "f[3]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0 1 0 ;
+	setAttr ".ro" -type "double3" 90 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke1:pasted__polyPlanarProj7";
+	rename -uid "53B9C347-448E-A520-7DE2-42B8873D2259";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[0]" "f[2]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0 1 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke1:pasted__polyPlanarProj6";
+	rename -uid "7AD1F111-408A-C3FA-4A90-2F9F9AAD8B0F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[5]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -0.25 1 0 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke1:pasted__polyPlanarProj5";
+	rename -uid "5C9C810D-4C06-B8A3-D259-6C929F72451C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[4]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0.25 1 0 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyCube -n "Stein_Ecke1:pasted__polyCube2";
+	rename -uid "46AF3882-4B07-DDBB-CD0F-82848FFB3E4C";
+	setAttr ".cuv" 4;
+createNode groupId -n "Stein_Ecke1:groupId9";
+	rename -uid "6038A397-4474-463B-F8C9-688EE5F9E76E";
+	setAttr ".ihi" 0;
+createNode shadingEngine -n "Stein_Ecke1:pasted__lambert2SG2";
+	rename -uid "B9239FBE-480C-7D45-208A-A0A567E85F70";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
+createNode materialInfo -n "Stein_Ecke1:pasted__materialInfo3";
+	rename -uid "DA5D524D-4BF4-D14F-E92C-39B55D1CB10F";
+createNode lambert -n "Stein_Ecke1:pasted__lambert4";
+	rename -uid "7619CC6F-458F-64F1-79BB-2485164528ED";
+createNode file -n "Stein_Ecke1:pasted__file5";
+	rename -uid "87AB9E52-4A45-C54A-66BF-DE901CFD932D";
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/brick-wall-textures.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Stein_Ecke1:pasted__place2dTexture5";
+	rename -uid "7BE29835-4BDE-3E9E-12A8-2FB3BC77A653";
+createNode bump2d -n "Stein_Ecke1:pasted__bump2d3";
+	rename -uid "65755FF4-4B07-503E-8ECC-59AA567E6E7B";
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Stein_Ecke1:pasted__file6";
+	rename -uid "66F8DC1D-4465-4225-EA4B-BABB7041EB72";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/brick-wall-textures.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Stein_Ecke1:pasted__place2dTexture6";
+	rename -uid "0FCFE6F1-4106-9985-188D-37B6A0588A3B";
+createNode groupId -n "Stein_Ecke1:groupId10";
+	rename -uid "973391A5-4E86-63B8-D9FC-E589A80A6429";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke2:groupParts20";
+	rename -uid "893138AF-4090-F8A7-B5E7-4AA9ED05B7AF";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[12:23]";
+createNode groupParts -n "Stein_Ecke2:groupParts19";
+	rename -uid "65F434E0-4BBB-CE19-8900-32B28ABF8B85";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:11]";
+createNode polyUnite -n "Stein_Ecke2:polyUnite5";
+	rename -uid "98E37367-4BA3-8EFD-73C2-48A93D6F5F96";
+	setAttr -s 2 ".ip";
+	setAttr -s 2 ".im";
+createNode groupParts -n "Stein_Ecke2:groupParts17";
+	rename -uid "8D2C9923-4CCF-6453-7CD5-59B2B5935B05";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:11]";
+createNode polyTriangulate -n "Stein_Ecke2:pasted__polyTriangulate2";
+	rename -uid "D1C32350-4198-5277-EA5F-A4B4A5C97B7D";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+createNode polyPlanarProj -n "Stein_Ecke2:pasted__polyPlanarProj20";
+	rename -uid "B540B0E5-4530-74F6-68CE-7496753F4AA3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[1]" "f[3]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0 1 0 ;
+	setAttr ".ro" -type "double3" 90 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke2:pasted__polyPlanarProj19";
+	rename -uid "EC0D9ED3-454B-89B5-CC19-EAAE4B9F7777";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[0]" "f[2]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0 1 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke2:pasted__polyPlanarProj18";
+	rename -uid "B9FC1C49-4BC7-776B-B7D4-4B846CC5714D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[5]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -0.25 1 0 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke2:pasted__polyPlanarProj17";
+	rename -uid "2254D795-462A-F36F-4013-8CB8DB54392D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[4]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0.25 1 0 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyCube -n "Stein_Ecke2:pasted__polyCube5";
+	rename -uid "9CA4A41D-4DAF-AC91-7810-FD8FB1F0A66C";
+	setAttr ".cuv" 4;
+createNode groupId -n "Stein_Ecke2:groupId25";
+	rename -uid "ECBB331A-4A33-BA52-74A0-81BDFA9F6421";
+	setAttr ".ihi" 0;
+createNode shadingEngine -n "Stein_Ecke2:pasted__lambert2SG5";
+	rename -uid "E177012D-4402-E6C2-19FD-D4A1639FE92D";
+	setAttr ".ihi" 0;
+	setAttr -s 4 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 4 ".gn";
+createNode materialInfo -n "Stein_Ecke2:pasted__materialInfo6";
+	rename -uid "3E6697D9-4C4F-8D5F-99F4-388D8A230883";
+createNode lambert -n "Stein_Ecke2:pasted__lambert7";
+	rename -uid "FF621412-4FE9-FA67-0C7F-CB901AE2D129";
+createNode file -n "Stein_Ecke2:pasted__file11";
+	rename -uid "0DC1A85F-47C1-20B5-AC51-6B850E4C1943";
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/brick-wall-textures.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Stein_Ecke2:pasted__place2dTexture11";
+	rename -uid "19BFE0CC-4F38-398D-E480-638FB57D13F3";
+createNode bump2d -n "Stein_Ecke2:pasted__bump2d6";
+	rename -uid "14CC5793-4ED3-A77D-184A-BA8B4BE03224";
+	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Stein_Ecke2:pasted__file12";
+	rename -uid "FC00CBC4-4E9A-6488-FA9C-6B98BF26A0D0";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/brick-wall-textures.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Stein_Ecke2:pasted__place2dTexture12";
+	rename -uid "D17422B9-49AF-56ED-B379-0EAE27114742";
+createNode groupId -n "Stein_Ecke2:groupId26";
+	rename -uid "F671A8C0-4A15-59DC-DC03-958607884FF1";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke2:groupParts18";
+	rename -uid "3C84B2D6-45B2-0A08-B4F0-CFBDB80E2D52";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:11]";
+createNode polyTriangulate -n "Stein_Ecke2:pasted__polyTriangulate1";
+	rename -uid "817E7514-47E7-69DB-BE9D-4C98D2673D5E";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+createNode polyPlanarProj -n "Stein_Ecke2:pasted__polyPlanarProj16";
+	rename -uid "E35556C3-4EA1-A9A9-BFE2-F3968AA466AA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[1]" "f[3]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0 1 0 ;
+	setAttr ".ro" -type "double3" 90 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke2:pasted__polyPlanarProj15";
+	rename -uid "9C888DC0-4081-6B77-D1B5-31A45D9DEA6E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[0]" "f[2]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0 1 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke2:pasted__polyPlanarProj14";
+	rename -uid "75F0FA2A-4F46-CC5A-C32D-369DF892D7BA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[5]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -0.25 1 0 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke2:pasted__polyPlanarProj13";
+	rename -uid "CCED234C-4C6A-48C0-2B54-FCB10B444453";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[4]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0.25 1 0 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyCube -n "Stein_Ecke2:pasted__polyCube4";
+	rename -uid "EEB9AFF0-406D-9E51-A422-6BB530C0CD02";
+	setAttr ".cuv" 4;
+createNode groupId -n "Stein_Ecke2:groupId27";
+	rename -uid "7F370AA9-44F6-F51E-E380-A7A874010D3F";
+	setAttr ".ihi" 0;
+createNode shadingEngine -n "Stein_Ecke2:pasted__lambert2SG4";
+	rename -uid "33EAC542-487A-BA1F-5CF6-FC835335F946";
+	setAttr ".ihi" 0;
+	setAttr -s 4 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 4 ".gn";
+createNode materialInfo -n "Stein_Ecke2:pasted__materialInfo5";
+	rename -uid "C68A06C9-4B37-1436-9181-B0A9F64DA9D9";
+createNode lambert -n "Stein_Ecke2:pasted__lambert6";
+	rename -uid "EF6D70EE-495C-98EE-26C9-11812F0E1BA2";
+createNode file -n "Stein_Ecke2:pasted__file9";
+	rename -uid "BD2492DA-49AD-D325-52A5-F89FFEEF6485";
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/brick-wall-textures.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Stein_Ecke2:pasted__place2dTexture9";
+	rename -uid "0AAFF1D1-43E1-CA67-B88D-D0A8CFBABCDA";
+createNode bump2d -n "Stein_Ecke2:pasted__bump2d5";
+	rename -uid "673F8E19-4BF4-331B-796D-1F9C39140801";
+	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Stein_Ecke2:pasted__file10";
+	rename -uid "254A5515-4BF2-5757-DF85-34A7774CA0FB";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/brick-wall-textures.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Stein_Ecke2:pasted__place2dTexture10";
+	rename -uid "1392EB40-4579-E8F4-678D-B6B0253021BB";
+createNode groupId -n "Stein_Ecke2:groupId28";
+	rename -uid "88678546-4287-A55F-1085-E096F57EEB1D";
+	setAttr ".ihi" 0;
+createNode groupId -n "Stein_Ecke2:groupId29";
+	rename -uid "58D145AF-4C5D-C805-6433-599033A9D651";
+	setAttr ".ihi" 0;
+createNode groupId -n "Stein_Ecke2:groupId30";
+	rename -uid "3EA96F97-47BC-4012-A0A7-9C80DFE82D5A";
+	setAttr ".ihi" 0;
+createNode polyCBoolOp -n "Stein_Ecke_Einzel:polyCBoolOp1";
+	rename -uid "2486F0EB-4B66-FC6C-EDA0-9F84AEE5A141";
+	setAttr -s 2 ".ip";
+	setAttr -s 2 ".im";
+	setAttr ".op" 3;
+	setAttr ".cls" 1;
+	setAttr ".mg" -type "Int32Array" 2 -668 -670 ;
+createNode groupParts -n "Stein_Ecke_Einzel:groupParts21";
+	rename -uid "124DA3C9-4D90-B520-F4F7-908FD90D70E5";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:11]";
+createNode polyTriangulate -n "Stein_Ecke_Einzel:pasted__pasted__polyTriangulate3";
+	rename -uid "EC8A599C-4F01-58AC-4415-D5955EB58E6B";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+createNode polyPlanarProj -n "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj24";
+	rename -uid "D01A4BE6-4498-CE2B-AAFD-32899145471D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[1]" "f[3]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0 1 0 ;
+	setAttr ".ro" -type "double3" 90 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj23";
+	rename -uid "0D013B1E-4072-27EC-1283-379D768BD5F0";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[0]" "f[2]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0 1 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj22";
+	rename -uid "86C2C664-4EE7-55EF-6F95-DD9D18F4D744";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[5]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -0.25 1 0 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj21";
+	rename -uid "9A5CA6D9-4ACB-716B-D447-B787DF0C3902";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[4]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0.25 1 0 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyCube -n "Stein_Ecke_Einzel:pasted__pasted__polyCube6";
+	rename -uid "27CA90EA-4179-B040-FC51-46A66F62EC2B";
+	setAttr ".cuv" 4;
+createNode groupId -n "Stein_Ecke_Einzel:groupId31";
+	rename -uid "0001BE93-40AA-BD3D-6631-338E0A59D3BC";
+	setAttr ".ihi" 0;
+createNode shadingEngine -n "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6";
+	rename -uid "21A674D3-4DEF-1087-3BF6-B38D6F24E4C8";
+	setAttr ".ihi" 0;
+	setAttr -s 5 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 3 ".gn";
+createNode materialInfo -n "Stein_Ecke_Einzel:pasted__pasted__materialInfo7";
+	rename -uid "D2F6150A-4AC3-494D-C7A5-A08AB530873D";
+createNode lambert -n "Stein_Ecke_Einzel:pasted__pasted__lambert8";
+	rename -uid "396BE179-49A2-ADA8-BA66-9090CA55E347";
+createNode file -n "Stein_Ecke_Einzel:pasted__pasted__file13";
+	rename -uid "349A501A-4093-8B62-82F6-6BBC0D2240AB";
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/brick-wall-textures.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13";
+	rename -uid "6EF95FA6-419B-FB1B-4E50-C3873BA78B3B";
+createNode bump2d -n "Stein_Ecke_Einzel:pasted__pasted__bump2d7";
+	rename -uid "5EF87DD2-4AE1-DD04-F996-5989B0354117";
+	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Stein_Ecke_Einzel:pasted__pasted__file14";
+	rename -uid "E110BA0B-4F04-24E1-89B4-7994CDE872CD";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/brick-wall-textures.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14";
+	rename -uid "6947F505-4DE3-4CF5-E587-7D8ED02CB014";
+createNode groupId -n "Stein_Ecke_Einzel:groupId32";
+	rename -uid "D66CE893-4589-A1B6-0A3D-54ABC192AC7D";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke_Einzel:groupParts22";
+	rename -uid "DB1F8BD3-4492-637C-DA82-CA8C19E8CA54";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:11]";
+createNode polyTriangulate -n "Stein_Ecke_Einzel:pasted__polyTriangulate3";
+	rename -uid "BCD8A74A-47D6-015C-23C8-44BEC1E69D52";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+createNode polyPlanarProj -n "Stein_Ecke_Einzel:pasted__polyPlanarProj24";
+	rename -uid "B1551422-43BB-4E09-F9EF-DFAE847E7B13";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[1]" "f[3]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0 1 0 ;
+	setAttr ".ro" -type "double3" 90 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke_Einzel:pasted__polyPlanarProj23";
+	rename -uid "A01E806E-4BF0-A993-FAD3-82823773231A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[0]" "f[2]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0 1 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke_Einzel:pasted__polyPlanarProj22";
+	rename -uid "DEC73B3F-4C6D-A12F-52CB-51959BCDB39F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[5]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -0.25 1 0 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyPlanarProj -n "Stein_Ecke_Einzel:pasted__polyPlanarProj21";
+	rename -uid "612814A0-4F16-A105-3366-DE8CD96EB9CA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[4]";
+	setAttr ".ix" -type "matrix" 0.5 0 0 0 0 2 0 0 0 0 5 0 0 1 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 0.25 1 0 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 5 2 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyCube -n "Stein_Ecke_Einzel:pasted__polyCube6";
+	rename -uid "1164ACA7-42A8-A92E-167B-E69732791FA2";
+	setAttr ".cuv" 4;
+createNode groupId -n "Stein_Ecke_Einzel:groupId33";
+	rename -uid "F37C18A3-41CF-8143-629A-FD8C15AFA864";
+	setAttr ".ihi" 0;
+createNode shadingEngine -n "Stein_Ecke_Einzel:pasted__lambert2SG6";
+	rename -uid "0B464EC2-4F91-A1BC-F1A4-FEA10438FAFD";
+	setAttr ".ihi" 0;
+	setAttr -s 4 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 3 ".gn";
+createNode materialInfo -n "Stein_Ecke_Einzel:pasted__materialInfo7";
+	rename -uid "8EC29794-458B-C7F1-7F5A-B68DF66EDD95";
+createNode lambert -n "Stein_Ecke_Einzel:pasted__lambert8";
+	rename -uid "10F90D29-4425-8C9E-DE3A-ECB855D12F78";
+createNode file -n "Stein_Ecke_Einzel:pasted__file13";
+	rename -uid "7991F6AA-4BB2-BF7E-DDFA-E2B0BCC33A4A";
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/brick-wall-textures.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Stein_Ecke_Einzel:pasted__place2dTexture13";
+	rename -uid "ADCB796E-42F6-9269-1547-57A46118F1D3";
+createNode bump2d -n "Stein_Ecke_Einzel:pasted__bump2d7";
+	rename -uid "347C432C-4A67-2CF5-1E38-F1A25742A0D1";
+	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Stein_Ecke_Einzel:pasted__file14";
+	rename -uid "382989A1-4F43-1BB7-7AFE-CEA7F7B6C6B4";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/Leon Arndt/Documents/maya/projects/GSP//sourceimages/brick-wall-textures.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Stein_Ecke_Einzel:pasted__place2dTexture14";
+	rename -uid "D1DB5E93-461F-C218-2D23-3BB7ABF145A1";
+createNode groupId -n "Stein_Ecke_Einzel:groupId34";
+	rename -uid "BDA9E94F-4147-C661-B94C-CE916EB8EA63";
+	setAttr ".ihi" 0;
+createNode groupId -n "Stein_Ecke_Einzel:groupId35";
+	rename -uid "8E03076D-458A-9593-1482-2BB25EF26FFC";
+	setAttr ".ihi" 0;
+createNode polyUnite -n "polyUnite4";
+	rename -uid "644EF0AF-4606-6706-3DA9-05892DA2CE61";
+	setAttr -s 3 ".ip";
+	setAttr -s 3 ".im";
+createNode groupId -n "Stein_Ecke2:groupId31";
+	rename -uid "00822239-4649-CF57-1DDE-DE91A13A04F2";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke2:groupParts21";
+	rename -uid "784D81E2-4E96-85F9-86BA-80B3EDB15729";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:11]";
+createNode groupId -n "Stein_Ecke2:groupId32";
+	rename -uid "9B32EAAA-4129-3509-A45D-4595868416D2";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke2:groupParts22";
+	rename -uid "9BCC2224-49A2-8689-F991-C98C28583430";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[12:23]";
+createNode groupId -n "Stein_Ecke2:groupId33";
+	rename -uid "7EFE3414-415B-8268-9284-9799D4989401";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke2:groupParts23";
+	rename -uid "7CE15117-4B12-09D0-8838-C789693605EA";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[24:35]";
+createNode groupId -n "Stein_Ecke2:groupId34";
+	rename -uid "18F44136-40D5-3EE2-30FC-D5ACC3C1876A";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke2:groupParts24";
+	rename -uid "D1A0E7D9-4729-2923-994D-08AAEEF765F0";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[36:47]";
+createNode groupId -n "Stein_Ecke2:groupId35";
+	rename -uid "A9360A6E-4AE7-8A63-DAB2-AA8573745CB2";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke2:groupParts25";
+	rename -uid "289DE0A9-4F5B-BD03-9222-7AAA1FC20F57";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[48:59]";
+createNode groupId -n "Stein_Ecke2:groupId36";
+	rename -uid "F589CEB8-4992-FD46-B20B-AD85E6BCB982";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke2:groupParts26";
+	rename -uid "B30F77C4-400A-F6BB-8594-FAA74C0E1458";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[60:71]";
+createNode groupId -n "Stein_Ecke2:groupId37";
+	rename -uid "04728B47-438B-3503-39C6-F486355D4482";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke2:groupParts27";
+	rename -uid "F843BDD8-4017-5EA5-DF89-EFB027E42A59";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[72:73]" "f[76:83]";
+createNode groupId -n "Stein_Ecke2:groupId38";
+	rename -uid "569196B2-4A50-B02C-0C98-95B1FC0F92D4";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke2:groupParts28";
+	rename -uid "8AD391AC-4427-8C5A-98F3-9FAE8252F9AA";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[74:75]";
+createNode groupId -n "Stein_Ecke2:groupId39";
+	rename -uid "02DA8541-4AE4-E6A7-12DC-5E9B90275591";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke2:groupParts29";
+	rename -uid "4530CB10-4F92-AB28-A372-F48F75F93AC1";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 3 "f[84:85]" "f[89:93]" "f[95]";
+createNode groupId -n "Stein_Ecke2:groupId40";
+	rename -uid "4E496A0B-47C4-B560-3F0D-6297E9BA8DC6";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Stein_Ecke2:groupParts30";
+	rename -uid "9BDCFEBE-468A-CE4C-EEC3-F6BE2109C9BA";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[86:88]" "f[94]";
+createNode polyTriangulate -n "polyTriangulate2";
+	rename -uid "D35A3B6D-4813-2D50-5583-6F8AC700CB64";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+createNode polyTriangulate -n "pasted__polyTriangulate1";
+	rename -uid "40A1911F-439A-8D81-F426-ACB5EA881112";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+createNode polyPlane -n "pasted__polyPlane1";
+	rename -uid "C8573FB7-4ADE-29B6-647B-FD99E2A5E819";
+	setAttr ".cuv" 2;
+createNode deleteComponent -n "deleteComponent1";
+	rename -uid "2C3556F6-4D0A-9651-7A64-0CAB34E041E1";
+	setAttr ".dc" -type "componentList" 1 "f[180:181]";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -3108,21 +4401,21 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 29 ".st";
+	setAttr -s 40 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 31 ".s";
+	setAttr -s 42 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 59 ".u";
+	setAttr -s 84 ".u";
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
-	setAttr -s 43 ".tx";
+	setAttr -s 61 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 35 ".dsm";
+	setAttr -s 44 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 34 ".gn";
+	setAttr -s 42 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -3132,8 +4425,6 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "Boden:groupId9.id" "Boden:pCubeShape3.iog.og[0].gid";
 connectAttr "Boden:lambert8SG.mwc" "Boden:pCubeShape3.iog.og[0].gco";
 connectAttr "Boden:groupParts7.og" "Boden:pCubeShape3.i";
@@ -3519,6 +4810,167 @@ connectAttr "Stein6:groupId11.id" "EShape2.iog.og[6].gid";
 connectAttr "Boden1:pasted__lambert9SG2.mwc" "EShape2.iog.og[6].gco";
 connectAttr "Stein6:groupId12.id" "EShape2.iog.og[7].gid";
 connectAttr "Stein7:lambert2SG.mwc" "EShape2.iog.og[7].gco";
+connectAttr "Boden2:pasted__groupId18.id" "Boden2:pasted__pCubeShape4.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "Boden2:pasted__pCubeShape4.iog.og[0].gco"
+		;
+connectAttr "Boden2:pasted__groupId13.id" "Boden2:pasted__pCubeShape4.iog.og[1].gid"
+		;
+connectAttr "Boden2:pasted__lambert9SG2.mwc" "Boden2:pasted__pCubeShape4.iog.og[1].gco"
+		;
+connectAttr "Boden2:pasted__polyAutoProj2.out" "Boden2:pasted__pCubeShape4.i";
+connectAttr "Boden2:pasted__groupId19.id" "Boden2:pasted__pCubeShape4.ciog.cog[0].cgid"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__groupId13.id" "Boden2:pasted__pasted__pasted__pasted__pCubeShape3.iog.og[0].gid"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.mwc" "Boden2:pasted__pasted__pasted__pasted__pCubeShape3.iog.og[0].gco"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__groupParts9.og" "Boden2:pasted__pasted__pasted__pasted__pCubeShape3.i"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__groupId14.id" "Boden2:pasted__pasted__pasted__pasted__pCubeShape3.ciog.cog[0].cgid"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__groupId13.id" "|Boden2:group11|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform8|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.iog.og[0].gid"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.mwc" "|Boden2:group11|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform8|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.iog.og[0].gco"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__groupParts9.og" "|Boden2:group11|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform8|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.i"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__groupId14.id" "|Boden2:group11|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform8|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.ciog.cog[0].cgid"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__groupId15.id" "|Boden2:group12|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform10|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.iog.og[0].gid"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.mwc" "|Boden2:group12|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform10|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.iog.og[0].gco"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__groupParts10.og" "|Boden2:group12|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform10|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.i"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__groupId16.id" "|Boden2:group12|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform10|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.ciog.cog[0].cgid"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__groupId13.id" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape3.iog.og[0].gid"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.mwc" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape3.iog.og[0].gco"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__groupParts9.og" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape3.i"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__groupId14.id" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape3.ciog.cog[0].cgid"
+		;
+connectAttr "Boden2:polyTriangulate3.out" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.i"
+		;
+connectAttr "Boden2:groupId22.id" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[0].gid"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.mwc" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[0].gco"
+		;
+connectAttr "Boden2:groupId23.id" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[1].gid"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.mwc" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[1].gco"
+		;
+connectAttr "Boden2:groupId24.id" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[2].gid"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.mwc" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[2].gco"
+		;
+connectAttr "Boden2:groupId25.id" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[3].gid"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.mwc" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[3].gco"
+		;
+connectAttr "Boden2:groupId26.id" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[4].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[4].gco"
+		;
+connectAttr "Boden2:groupId27.id" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[5].gid"
+		;
+connectAttr "Boden2:pasted__lambert9SG2.mwc" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[5].gco"
+		;
+connectAttr "Stein_Ecke1:groupParts6.og" "Stein_Ecke1:pasted__WallShape.i";
+connectAttr "Stein_Ecke1:groupId9.id" "Stein_Ecke1:pasted__WallShape.iog.og[0].gid"
+		;
+connectAttr "Stein_Ecke1:pasted__lambert2SG2.mwc" "Stein_Ecke1:pasted__WallShape.iog.og[0].gco"
+		;
+connectAttr "Stein_Ecke1:groupId10.id" "Stein_Ecke1:pasted__WallShape.ciog.cog[0].cgid"
+		;
+connectAttr "Stein_Ecke1:groupParts5.og" "Stein_Ecke1:pasted__pasted__WallShape.i"
+		;
+connectAttr "Stein_Ecke1:groupId7.id" "Stein_Ecke1:pasted__pasted__WallShape.iog.og[0].gid"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__lambert2SG2.mwc" "Stein_Ecke1:pasted__pasted__WallShape.iog.og[0].gco"
+		;
+connectAttr "Stein_Ecke1:groupId8.id" "Stein_Ecke1:pasted__pasted__WallShape.ciog.cog[0].cgid"
+		;
+connectAttr "Stein_Ecke2:groupParts18.og" "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform9|Stein_Ecke2:pasted__Wand_SteinShape.i"
+		;
+connectAttr "Stein_Ecke2:groupId27.id" "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform9|Stein_Ecke2:pasted__Wand_SteinShape.iog.og[0].gid"
+		;
+connectAttr "Stein_Ecke2:pasted__lambert2SG4.mwc" "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform9|Stein_Ecke2:pasted__Wand_SteinShape.iog.og[0].gco"
+		;
+connectAttr "Stein_Ecke2:groupId28.id" "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform9|Stein_Ecke2:pasted__Wand_SteinShape.ciog.cog[0].cgid"
+		;
+connectAttr "Stein_Ecke2:groupParts17.og" "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform10|Stein_Ecke2:pasted__Wand_SteinShape.i"
+		;
+connectAttr "Stein_Ecke2:groupId25.id" "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform10|Stein_Ecke2:pasted__Wand_SteinShape.iog.og[0].gid"
+		;
+connectAttr "Stein_Ecke2:pasted__lambert2SG5.mwc" "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform10|Stein_Ecke2:pasted__Wand_SteinShape.iog.og[0].gco"
+		;
+connectAttr "Stein_Ecke2:groupId26.id" "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform10|Stein_Ecke2:pasted__Wand_SteinShape.ciog.cog[0].cgid"
+		;
+connectAttr "Stein_Ecke2:groupParts20.og" "Stein_Ecke2:group13_pasted__Wand_SteinShape.i"
+		;
+connectAttr "Stein_Ecke2:groupId29.id" "Stein_Ecke2:group13_pasted__Wand_SteinShape.iog.og[0].gid"
+		;
+connectAttr "Stein_Ecke2:pasted__lambert2SG5.mwc" "Stein_Ecke2:group13_pasted__Wand_SteinShape.iog.og[0].gco"
+		;
+connectAttr "Stein_Ecke2:groupId30.id" "Stein_Ecke2:group13_pasted__Wand_SteinShape.iog.og[1].gid"
+		;
+connectAttr "Stein_Ecke2:pasted__lambert2SG4.mwc" "Stein_Ecke2:group13_pasted__Wand_SteinShape.iog.og[1].gco"
+		;
+connectAttr "Stein_Ecke_Einzel:groupParts22.og" "Stein_Ecke_Einzel:pasted__Wand_SteinShape.i"
+		;
+connectAttr "Stein_Ecke_Einzel:groupId33.id" "Stein_Ecke_Einzel:pasted__Wand_SteinShape.iog.og[1].gid"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__lambert2SG6.mwc" "Stein_Ecke_Einzel:pasted__Wand_SteinShape.iog.og[1].gco"
+		;
+connectAttr "Stein_Ecke_Einzel:groupId34.id" "Stein_Ecke_Einzel:pasted__Wand_SteinShape.ciog.cog[1].cgid"
+		;
+connectAttr "Stein_Ecke_Einzel:groupParts21.og" "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke_Einzel:transform12|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.i"
+		;
+connectAttr "Stein_Ecke_Einzel:groupId31.id" "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke_Einzel:transform12|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.iog.og[1].gid"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.mwc" "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke_Einzel:transform12|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.iog.og[1].gco"
+		;
+connectAttr "Stein_Ecke_Einzel:groupId32.id" "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke_Einzel:transform12|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.ciog.cog[1].cgid"
+		;
+connectAttr "Stein_Ecke_Einzel:polyCBoolOp1.out" "|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke2:transform11|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.i"
+		;
+connectAttr "Stein_Ecke_Einzel:groupId31.id" "|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke2:transform11|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.iog.og[0].gid"
+		;
+connectAttr "Stein_Ecke_Einzel:groupId33.id" "|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke2:transform11|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.iog.og[1].gid"
+		;
+connectAttr "Stein_Ecke_Einzel:groupId35.id" "|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke2:transform11|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.ciog.cog[0].cgid"
+		;
+connectAttr "polyTriangulate2.out" "EShape3.i";
+connectAttr "Stein_Ecke2:groupId31.id" "EShape3.iog.og[0].gid";
+connectAttr "Stein_Ecke2:pasted__lambert2SG5.mwc" "EShape3.iog.og[0].gco";
+connectAttr "Stein_Ecke2:groupId32.id" "EShape3.iog.og[1].gid";
+connectAttr "Stein_Ecke2:pasted__lambert2SG4.mwc" "EShape3.iog.og[1].gco";
+connectAttr "Stein_Ecke2:groupId33.id" "EShape3.iog.og[2].gid";
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.mwc" "EShape3.iog.og[2].gco"
+		;
+connectAttr "Stein_Ecke2:groupId34.id" "EShape3.iog.og[3].gid";
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.mwc" "EShape3.iog.og[3].gco"
+		;
+connectAttr "Stein_Ecke2:groupId35.id" "EShape3.iog.og[4].gid";
+connectAttr "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.mwc" "EShape3.iog.og[4].gco"
+		;
+connectAttr "Stein_Ecke2:groupId36.id" "EShape3.iog.og[5].gid";
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.mwc" "EShape3.iog.og[5].gco"
+		;
+connectAttr "Stein_Ecke2:groupId37.id" "EShape3.iog.og[6].gid";
+connectAttr ":initialShadingGroup.mwc" "EShape3.iog.og[6].gco";
+connectAttr "Stein_Ecke2:groupId38.id" "EShape3.iog.og[7].gid";
+connectAttr "Boden2:pasted__lambert9SG2.mwc" "EShape3.iog.og[7].gco";
+connectAttr "Stein_Ecke2:groupId39.id" "EShape3.iog.og[8].gid";
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.mwc" "EShape3.iog.og[8].gco"
+		;
+connectAttr "Stein_Ecke2:groupId40.id" "EShape3.iog.og[9].gid";
+connectAttr "Stein_Ecke_Einzel:pasted__lambert2SG6.mwc" "EShape3.iog.og[9].gco";
+connectAttr "deleteComponent1.og" "pasted__EShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Boden:lambert8SG.message" ":defaultLightSet.message";
@@ -3548,6 +5000,17 @@ relationship "link" ":lightLinker1" "Boden1:pasted__pasted__pasted__pasted__past
 relationship "link" ":lightLinker1" "Boden1:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Stein6:lambert2SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Stein7:lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Boden2:pasted__lambert9SG2.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Stein_Ecke1:pasted__lambert2SG2.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Stein_Ecke1:pasted__pasted__lambert2SG2.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Stein_Ecke2:pasted__lambert2SG4.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Stein_Ecke2:pasted__lambert2SG5.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Stein_Ecke_Einzel:pasted__lambert2SG6.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Boden:lambert8SG.message" ":defaultLightSet.message";
@@ -3577,6 +5040,17 @@ relationship "shadowLink" ":lightLinker1" "Boden1:pasted__pasted__pasted__pasted
 relationship "shadowLink" ":lightLinker1" "Boden1:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Stein6:lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Stein7:lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Boden2:pasted__lambert9SG2.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Stein_Ecke1:pasted__lambert2SG2.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Stein_Ecke1:pasted__pasted__lambert2SG2.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Stein_Ecke2:pasted__lambert2SG4.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Stein_Ecke2:pasted__lambert2SG5.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Stein_Ecke_Einzel:pasted__lambert2SG6.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "Boden:groupParts14.og" "Boden:polyTriangulate1.ip";
@@ -5824,6 +7298,1210 @@ connectAttr "Stein6:groupParts8.og" "Stein6:groupParts9.ig";
 connectAttr "Stein6:groupId11.id" "Stein6:groupParts9.gi";
 connectAttr "Stein6:groupParts9.og" "Stein6:groupParts10.ig";
 connectAttr "Stein6:groupId12.id" "Stein6:groupParts10.gi";
+connectAttr "Boden2:groupParts23.og" "Boden2:polyTriangulate3.ip";
+connectAttr "Boden2:groupParts22.og" "Boden2:groupParts23.ig";
+connectAttr "Boden2:groupId27.id" "Boden2:groupParts23.gi";
+connectAttr "Boden2:groupParts21.og" "Boden2:groupParts22.ig";
+connectAttr "Boden2:groupId26.id" "Boden2:groupParts22.gi";
+connectAttr "Boden2:groupParts20.og" "Boden2:groupParts21.ig";
+connectAttr "Boden2:groupId25.id" "Boden2:groupParts21.gi";
+connectAttr "Boden2:groupParts19.og" "Boden2:groupParts20.ig";
+connectAttr "Boden2:groupId24.id" "Boden2:groupParts20.gi";
+connectAttr "Boden2:groupParts18.og" "Boden2:groupParts19.ig";
+connectAttr "Boden2:groupId23.id" "Boden2:groupParts19.gi";
+connectAttr "Boden2:polyUnite3.out" "Boden2:groupParts18.ig";
+connectAttr "Boden2:groupId22.id" "Boden2:groupParts18.gi";
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape3.o" "Boden2:polyUnite3.ip[0]"
+		;
+connectAttr "|Boden2:group12|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform10|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.o" "Boden2:polyUnite3.ip[1]"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pCubeShape3.o" "Boden2:polyUnite3.ip[2]"
+		;
+connectAttr "|Boden2:group11|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform8|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.o" "Boden2:polyUnite3.ip[3]"
+		;
+connectAttr "Boden2:pasted__pCubeShape4.o" "Boden2:polyUnite3.ip[4]";
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape3.wm" "Boden2:polyUnite3.im[0]"
+		;
+connectAttr "|Boden2:group12|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform10|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.wm" "Boden2:polyUnite3.im[1]"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pCubeShape3.wm" "Boden2:polyUnite3.im[2]"
+		;
+connectAttr "|Boden2:group11|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform8|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.wm" "Boden2:polyUnite3.im[3]"
+		;
+connectAttr "Boden2:pasted__pCubeShape4.wm" "Boden2:polyUnite3.im[4]";
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert10.oc" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.ss"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape3.iog.og[0]" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.dsm"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[0]" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.dsm"
+		 -na;
+connectAttr "EShape3.iog.og[2]" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.dsm"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__groupId13.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.gn"
+		 -na;
+connectAttr "Boden2:groupId22.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.gn"
+		 -na;
+connectAttr "Stein_Ecke2:groupId33.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.gn"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__materialInfo9.sg"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert10.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__materialInfo9.m"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__materialInfo9.t"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.oc" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert10.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.ws"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.c" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.c"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.tf" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.tf"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.rf" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.rf"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.mu" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.mu"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.mv" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.mv"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.s" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.s"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.wu" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.wu"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.wv" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.wv"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.re" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.re"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.of" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.of"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.r" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.ro"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.n" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.n"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.vt1" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.vt1"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.vt2" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.vt2"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.vt3" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.vt3"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.vc1" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.vc1"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.o" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.uv"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.ofs" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.fs"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__polyCube5.out" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__groupParts9.ig"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__groupId13.id" "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__groupParts9.gi"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert11.oc" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.ss"
+		;
+connectAttr "|Boden2:group12|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform10|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.iog.og[0]" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.dsm"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[1]" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.dsm"
+		 -na;
+connectAttr "EShape3.iog.og[3]" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.dsm"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__groupId15.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.gn"
+		 -na;
+connectAttr "Boden2:groupId23.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.gn"
+		 -na;
+connectAttr "Stein_Ecke2:groupId34.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.gn"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__materialInfo10.sg"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert11.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__materialInfo10.m"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__file16.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__materialInfo10.t"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__file16.oc" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert11.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.ws"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.c" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.c"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.tf" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.tf"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.rf" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.rf"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.mu" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.mu"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.mv" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.mv"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.s" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.s"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.wu" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.wu"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.wv" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.wv"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.re" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.re"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.of" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.of"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.r" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.ro"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.n" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.n"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.vt1" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.vt1"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.vt2" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.vt2"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.vt3" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.vt3"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.vc1" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.vc1"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.o" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.uv"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.ofs" "Boden2:pasted__pasted__pasted__pasted__pasted__file16.fs"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__polyCube6.out" "Boden2:pasted__pasted__pasted__pasted__pasted__groupParts10.ig"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__groupId15.id" "Boden2:pasted__pasted__pasted__pasted__pasted__groupParts10.gi"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__lambert10.oc" "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.ss"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pCubeShape3.iog.og[0]" "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.dsm"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[2]" "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.dsm"
+		 -na;
+connectAttr "EShape3.iog.og[4]" "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.dsm"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__groupId13.msg" "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.gn"
+		 -na;
+connectAttr "Boden2:groupId24.msg" "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.gn"
+		 -na;
+connectAttr "Stein_Ecke2:groupId35.msg" "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.gn"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.msg" "Boden2:pasted__pasted__pasted__pasted__materialInfo9.sg"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__lambert10.msg" "Boden2:pasted__pasted__pasted__pasted__materialInfo9.m"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__file15.msg" "Boden2:pasted__pasted__pasted__pasted__materialInfo9.t"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__file15.oc" "Boden2:pasted__pasted__pasted__pasted__lambert10.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Boden2:pasted__pasted__pasted__pasted__file15.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Boden2:pasted__pasted__pasted__pasted__file15.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Boden2:pasted__pasted__pasted__pasted__file15.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Boden2:pasted__pasted__pasted__pasted__file15.ws"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.c" "Boden2:pasted__pasted__pasted__pasted__file15.c"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.tf" "Boden2:pasted__pasted__pasted__pasted__file15.tf"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.rf" "Boden2:pasted__pasted__pasted__pasted__file15.rf"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.mu" "Boden2:pasted__pasted__pasted__pasted__file15.mu"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.mv" "Boden2:pasted__pasted__pasted__pasted__file15.mv"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.s" "Boden2:pasted__pasted__pasted__pasted__file15.s"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.wu" "Boden2:pasted__pasted__pasted__pasted__file15.wu"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.wv" "Boden2:pasted__pasted__pasted__pasted__file15.wv"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.re" "Boden2:pasted__pasted__pasted__pasted__file15.re"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.of" "Boden2:pasted__pasted__pasted__pasted__file15.of"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.r" "Boden2:pasted__pasted__pasted__pasted__file15.ro"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.n" "Boden2:pasted__pasted__pasted__pasted__file15.n"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.vt1" "Boden2:pasted__pasted__pasted__pasted__file15.vt1"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.vt2" "Boden2:pasted__pasted__pasted__pasted__file15.vt2"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.vt3" "Boden2:pasted__pasted__pasted__pasted__file15.vt3"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.vc1" "Boden2:pasted__pasted__pasted__pasted__file15.vc1"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.o" "Boden2:pasted__pasted__pasted__pasted__file15.uv"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.ofs" "Boden2:pasted__pasted__pasted__pasted__file15.fs"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__polyCube5.out" "Boden2:pasted__pasted__pasted__pasted__groupParts9.ig"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__groupId13.id" "Boden2:pasted__pasted__pasted__pasted__groupParts9.gi"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert10.oc" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.ss"
+		;
+connectAttr "|Boden2:group11|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform8|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.iog.og[0]" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.dsm"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[3]" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.dsm"
+		 -na;
+connectAttr "EShape3.iog.og[5]" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.dsm"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__groupId13.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.gn"
+		 -na;
+connectAttr "Boden2:groupId25.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.gn"
+		 -na;
+connectAttr "Stein_Ecke2:groupId36.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.gn"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__materialInfo9.sg"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert10.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__materialInfo9.m"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__file15.msg" "Boden2:pasted__pasted__pasted__pasted__pasted__materialInfo9.t"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__file15.oc" "Boden2:pasted__pasted__pasted__pasted__pasted__lambert10.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.ws"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.c" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.c"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.tf" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.tf"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.rf" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.rf"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.mu" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.mu"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.mv" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.mv"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.s" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.s"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.wu" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.wu"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.wv" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.wv"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.re" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.re"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.of" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.of"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.r" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.ro"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.n" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.n"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.vt1" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.vt1"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.vt2" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.vt2"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.vt3" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.vt3"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.vc1" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.vc1"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.o" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.uv"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.ofs" "Boden2:pasted__pasted__pasted__pasted__pasted__file15.fs"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__polyCube5.out" "Boden2:pasted__pasted__pasted__pasted__pasted__groupParts9.ig"
+		;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__groupId13.id" "Boden2:pasted__pasted__pasted__pasted__pasted__groupParts9.gi"
+		;
+connectAttr "Boden2:pasted__lambert13.oc" "Boden2:pasted__lambert9SG2.ss";
+connectAttr "Boden2:pasted__groupId13.msg" "Boden2:pasted__lambert9SG2.gn" -na;
+connectAttr "Boden2:groupId27.msg" "Boden2:pasted__lambert9SG2.gn" -na;
+connectAttr "Stein_Ecke2:groupId38.msg" "Boden2:pasted__lambert9SG2.gn" -na;
+connectAttr "Boden2:pasted__pCubeShape4.iog.og[1]" "Boden2:pasted__lambert9SG2.dsm"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[5]" "Boden2:pasted__lambert9SG2.dsm"
+		 -na;
+connectAttr "EShape3.iog.og[7]" "Boden2:pasted__lambert9SG2.dsm" -na;
+connectAttr "Boden2:pasted__lambert9SG2.msg" "Boden2:pasted__materialInfo12.sg";
+connectAttr "Boden2:pasted__lambert13.msg" "Boden2:pasted__materialInfo12.m";
+connectAttr "Boden2:pasted__file20.msg" "Boden2:pasted__materialInfo12.t" -na;
+connectAttr "Boden2:pasted__file20.oc" "Boden2:pasted__lambert13.c";
+connectAttr "Boden2:pasted__bump2d5.o" "Boden2:pasted__lambert13.n";
+connectAttr ":defaultColorMgtGlobals.cme" "Boden2:pasted__file20.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Boden2:pasted__file20.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Boden2:pasted__file20.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Boden2:pasted__file20.ws";
+connectAttr "Boden2:pasted__place2dTexture20.c" "Boden2:pasted__file20.c";
+connectAttr "Boden2:pasted__place2dTexture20.tf" "Boden2:pasted__file20.tf";
+connectAttr "Boden2:pasted__place2dTexture20.rf" "Boden2:pasted__file20.rf";
+connectAttr "Boden2:pasted__place2dTexture20.mu" "Boden2:pasted__file20.mu";
+connectAttr "Boden2:pasted__place2dTexture20.mv" "Boden2:pasted__file20.mv";
+connectAttr "Boden2:pasted__place2dTexture20.s" "Boden2:pasted__file20.s";
+connectAttr "Boden2:pasted__place2dTexture20.wu" "Boden2:pasted__file20.wu";
+connectAttr "Boden2:pasted__place2dTexture20.wv" "Boden2:pasted__file20.wv";
+connectAttr "Boden2:pasted__place2dTexture20.re" "Boden2:pasted__file20.re";
+connectAttr "Boden2:pasted__place2dTexture20.of" "Boden2:pasted__file20.of";
+connectAttr "Boden2:pasted__place2dTexture20.r" "Boden2:pasted__file20.ro";
+connectAttr "Boden2:pasted__place2dTexture20.n" "Boden2:pasted__file20.n";
+connectAttr "Boden2:pasted__place2dTexture20.vt1" "Boden2:pasted__file20.vt1";
+connectAttr "Boden2:pasted__place2dTexture20.vt2" "Boden2:pasted__file20.vt2";
+connectAttr "Boden2:pasted__place2dTexture20.vt3" "Boden2:pasted__file20.vt3";
+connectAttr "Boden2:pasted__place2dTexture20.vc1" "Boden2:pasted__file20.vc1";
+connectAttr "Boden2:pasted__place2dTexture20.o" "Boden2:pasted__file20.uv";
+connectAttr "Boden2:pasted__place2dTexture20.ofs" "Boden2:pasted__file20.fs";
+connectAttr "Boden2:pasted__file21.oa" "Boden2:pasted__bump2d5.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "Boden2:pasted__file21.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Boden2:pasted__file21.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Boden2:pasted__file21.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Boden2:pasted__file21.ws";
+connectAttr "Boden2:pasted__place2dTexture21.c" "Boden2:pasted__file21.c";
+connectAttr "Boden2:pasted__place2dTexture21.tf" "Boden2:pasted__file21.tf";
+connectAttr "Boden2:pasted__place2dTexture21.rf" "Boden2:pasted__file21.rf";
+connectAttr "Boden2:pasted__place2dTexture21.mu" "Boden2:pasted__file21.mu";
+connectAttr "Boden2:pasted__place2dTexture21.mv" "Boden2:pasted__file21.mv";
+connectAttr "Boden2:pasted__place2dTexture21.s" "Boden2:pasted__file21.s";
+connectAttr "Boden2:pasted__place2dTexture21.wu" "Boden2:pasted__file21.wu";
+connectAttr "Boden2:pasted__place2dTexture21.wv" "Boden2:pasted__file21.wv";
+connectAttr "Boden2:pasted__place2dTexture21.re" "Boden2:pasted__file21.re";
+connectAttr "Boden2:pasted__place2dTexture21.of" "Boden2:pasted__file21.of";
+connectAttr "Boden2:pasted__place2dTexture21.r" "Boden2:pasted__file21.ro";
+connectAttr "Boden2:pasted__place2dTexture21.n" "Boden2:pasted__file21.n";
+connectAttr "Boden2:pasted__place2dTexture21.vt1" "Boden2:pasted__file21.vt1";
+connectAttr "Boden2:pasted__place2dTexture21.vt2" "Boden2:pasted__file21.vt2";
+connectAttr "Boden2:pasted__place2dTexture21.vt3" "Boden2:pasted__file21.vt3";
+connectAttr "Boden2:pasted__place2dTexture21.vc1" "Boden2:pasted__file21.vc1";
+connectAttr "Boden2:pasted__place2dTexture21.o" "Boden2:pasted__file21.uv";
+connectAttr "Boden2:pasted__place2dTexture21.ofs" "Boden2:pasted__file21.fs";
+connectAttr "Boden2:pasted__groupParts9.og" "Boden2:pasted__polyAutoProj2.ip";
+connectAttr "Boden2:pasted__pCubeShape4.wm" "Boden2:pasted__polyAutoProj2.mp";
+connectAttr "Boden2:pasted__groupParts12.og" "Boden2:pasted__groupParts9.ig";
+connectAttr "Boden2:pasted__groupId13.id" "Boden2:pasted__groupParts9.gi";
+connectAttr "Boden2:pasted__polyCube7.out" "Boden2:pasted__groupParts12.ig";
+connectAttr "Boden2:pasted__groupId18.id" "Boden2:pasted__groupParts12.gi";
+connectAttr "Stein_Ecke1:pasted__pasted__polyPlanarProj8.out" "Stein_Ecke1:groupParts5.ig"
+		;
+connectAttr "Stein_Ecke1:groupId7.id" "Stein_Ecke1:groupParts5.gi";
+connectAttr "Stein_Ecke1:pasted__pasted__polyPlanarProj7.out" "Stein_Ecke1:pasted__pasted__polyPlanarProj8.ip"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__WallShape.wm" "Stein_Ecke1:pasted__pasted__polyPlanarProj8.mp"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__polyPlanarProj6.out" "Stein_Ecke1:pasted__pasted__polyPlanarProj7.ip"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__WallShape.wm" "Stein_Ecke1:pasted__pasted__polyPlanarProj7.mp"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__polyPlanarProj5.out" "Stein_Ecke1:pasted__pasted__polyPlanarProj6.ip"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__WallShape.wm" "Stein_Ecke1:pasted__pasted__polyPlanarProj6.mp"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__polyCube2.out" "Stein_Ecke1:pasted__pasted__polyPlanarProj5.ip"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__WallShape.wm" "Stein_Ecke1:pasted__pasted__polyPlanarProj5.mp"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__lambert4.oc" "Stein_Ecke1:pasted__pasted__lambert2SG2.ss"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__WallShape.iog.og[0]" "Stein_Ecke1:pasted__pasted__lambert2SG2.dsm"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__pasted__WallShape.ciog.cog[0]" "Stein_Ecke1:pasted__pasted__lambert2SG2.dsm"
+		 -na;
+connectAttr "Stein_Ecke1:groupId7.msg" "Stein_Ecke1:pasted__pasted__lambert2SG2.gn"
+		 -na;
+connectAttr "Stein_Ecke1:groupId8.msg" "Stein_Ecke1:pasted__pasted__lambert2SG2.gn"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__pasted__lambert2SG2.msg" "Stein_Ecke1:pasted__pasted__materialInfo3.sg"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__lambert4.msg" "Stein_Ecke1:pasted__pasted__materialInfo3.m"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__file5.msg" "Stein_Ecke1:pasted__pasted__materialInfo3.t"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__pasted__file5.oc" "Stein_Ecke1:pasted__pasted__lambert4.c"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__bump2d3.o" "Stein_Ecke1:pasted__pasted__lambert4.n"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Stein_Ecke1:pasted__pasted__file5.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Stein_Ecke1:pasted__pasted__file5.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Stein_Ecke1:pasted__pasted__file5.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Stein_Ecke1:pasted__pasted__file5.ws"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.c" "Stein_Ecke1:pasted__pasted__file5.c"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.tf" "Stein_Ecke1:pasted__pasted__file5.tf"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.rf" "Stein_Ecke1:pasted__pasted__file5.rf"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.mu" "Stein_Ecke1:pasted__pasted__file5.mu"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.mv" "Stein_Ecke1:pasted__pasted__file5.mv"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.s" "Stein_Ecke1:pasted__pasted__file5.s"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.wu" "Stein_Ecke1:pasted__pasted__file5.wu"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.wv" "Stein_Ecke1:pasted__pasted__file5.wv"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.re" "Stein_Ecke1:pasted__pasted__file5.re"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.of" "Stein_Ecke1:pasted__pasted__file5.of"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.r" "Stein_Ecke1:pasted__pasted__file5.ro"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.n" "Stein_Ecke1:pasted__pasted__file5.n"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.vt1" "Stein_Ecke1:pasted__pasted__file5.vt1"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.vt2" "Stein_Ecke1:pasted__pasted__file5.vt2"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.vt3" "Stein_Ecke1:pasted__pasted__file5.vt3"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.vc1" "Stein_Ecke1:pasted__pasted__file5.vc1"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.o" "Stein_Ecke1:pasted__pasted__file5.uv"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.ofs" "Stein_Ecke1:pasted__pasted__file5.fs"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__file6.oa" "Stein_Ecke1:pasted__pasted__bump2d3.bv"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Stein_Ecke1:pasted__pasted__file6.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Stein_Ecke1:pasted__pasted__file6.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Stein_Ecke1:pasted__pasted__file6.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Stein_Ecke1:pasted__pasted__file6.ws"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.c" "Stein_Ecke1:pasted__pasted__file6.c"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.tf" "Stein_Ecke1:pasted__pasted__file6.tf"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.rf" "Stein_Ecke1:pasted__pasted__file6.rf"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.mu" "Stein_Ecke1:pasted__pasted__file6.mu"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.mv" "Stein_Ecke1:pasted__pasted__file6.mv"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.s" "Stein_Ecke1:pasted__pasted__file6.s"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.wu" "Stein_Ecke1:pasted__pasted__file6.wu"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.wv" "Stein_Ecke1:pasted__pasted__file6.wv"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.re" "Stein_Ecke1:pasted__pasted__file6.re"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.of" "Stein_Ecke1:pasted__pasted__file6.of"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.r" "Stein_Ecke1:pasted__pasted__file6.ro"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.n" "Stein_Ecke1:pasted__pasted__file6.n"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.vt1" "Stein_Ecke1:pasted__pasted__file6.vt1"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.vt2" "Stein_Ecke1:pasted__pasted__file6.vt2"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.vt3" "Stein_Ecke1:pasted__pasted__file6.vt3"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.vc1" "Stein_Ecke1:pasted__pasted__file6.vc1"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.o" "Stein_Ecke1:pasted__pasted__file6.uv"
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.ofs" "Stein_Ecke1:pasted__pasted__file6.fs"
+		;
+connectAttr "Stein_Ecke1:pasted__polyPlanarProj8.out" "Stein_Ecke1:groupParts6.ig"
+		;
+connectAttr "Stein_Ecke1:groupId9.id" "Stein_Ecke1:groupParts6.gi";
+connectAttr "Stein_Ecke1:pasted__polyPlanarProj7.out" "Stein_Ecke1:pasted__polyPlanarProj8.ip"
+		;
+connectAttr "Stein_Ecke1:pasted__WallShape.wm" "Stein_Ecke1:pasted__polyPlanarProj8.mp"
+		;
+connectAttr "Stein_Ecke1:pasted__polyPlanarProj6.out" "Stein_Ecke1:pasted__polyPlanarProj7.ip"
+		;
+connectAttr "Stein_Ecke1:pasted__WallShape.wm" "Stein_Ecke1:pasted__polyPlanarProj7.mp"
+		;
+connectAttr "Stein_Ecke1:pasted__polyPlanarProj5.out" "Stein_Ecke1:pasted__polyPlanarProj6.ip"
+		;
+connectAttr "Stein_Ecke1:pasted__WallShape.wm" "Stein_Ecke1:pasted__polyPlanarProj6.mp"
+		;
+connectAttr "Stein_Ecke1:pasted__polyCube2.out" "Stein_Ecke1:pasted__polyPlanarProj5.ip"
+		;
+connectAttr "Stein_Ecke1:pasted__WallShape.wm" "Stein_Ecke1:pasted__polyPlanarProj5.mp"
+		;
+connectAttr "Stein_Ecke1:pasted__lambert4.oc" "Stein_Ecke1:pasted__lambert2SG2.ss"
+		;
+connectAttr "Stein_Ecke1:pasted__WallShape.iog.og[0]" "Stein_Ecke1:pasted__lambert2SG2.dsm"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__WallShape.ciog.cog[0]" "Stein_Ecke1:pasted__lambert2SG2.dsm"
+		 -na;
+connectAttr "Stein_Ecke1:groupId9.msg" "Stein_Ecke1:pasted__lambert2SG2.gn" -na;
+connectAttr "Stein_Ecke1:groupId10.msg" "Stein_Ecke1:pasted__lambert2SG2.gn" -na
+		;
+connectAttr "Stein_Ecke1:pasted__lambert2SG2.msg" "Stein_Ecke1:pasted__materialInfo3.sg"
+		;
+connectAttr "Stein_Ecke1:pasted__lambert4.msg" "Stein_Ecke1:pasted__materialInfo3.m"
+		;
+connectAttr "Stein_Ecke1:pasted__file5.msg" "Stein_Ecke1:pasted__materialInfo3.t"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__file5.oc" "Stein_Ecke1:pasted__lambert4.c";
+connectAttr "Stein_Ecke1:pasted__bump2d3.o" "Stein_Ecke1:pasted__lambert4.n";
+connectAttr ":defaultColorMgtGlobals.cme" "Stein_Ecke1:pasted__file5.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Stein_Ecke1:pasted__file5.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Stein_Ecke1:pasted__file5.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Stein_Ecke1:pasted__file5.ws";
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.c" "Stein_Ecke1:pasted__file5.c"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.tf" "Stein_Ecke1:pasted__file5.tf"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.rf" "Stein_Ecke1:pasted__file5.rf"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.mu" "Stein_Ecke1:pasted__file5.mu"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.mv" "Stein_Ecke1:pasted__file5.mv"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.s" "Stein_Ecke1:pasted__file5.s"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.wu" "Stein_Ecke1:pasted__file5.wu"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.wv" "Stein_Ecke1:pasted__file5.wv"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.re" "Stein_Ecke1:pasted__file5.re"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.of" "Stein_Ecke1:pasted__file5.of"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.r" "Stein_Ecke1:pasted__file5.ro"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.n" "Stein_Ecke1:pasted__file5.n"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.vt1" "Stein_Ecke1:pasted__file5.vt1"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.vt2" "Stein_Ecke1:pasted__file5.vt2"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.vt3" "Stein_Ecke1:pasted__file5.vt3"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.vc1" "Stein_Ecke1:pasted__file5.vc1"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.o" "Stein_Ecke1:pasted__file5.uv"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.ofs" "Stein_Ecke1:pasted__file5.fs"
+		;
+connectAttr "Stein_Ecke1:pasted__file6.oa" "Stein_Ecke1:pasted__bump2d3.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "Stein_Ecke1:pasted__file6.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Stein_Ecke1:pasted__file6.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Stein_Ecke1:pasted__file6.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Stein_Ecke1:pasted__file6.ws";
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.c" "Stein_Ecke1:pasted__file6.c"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.tf" "Stein_Ecke1:pasted__file6.tf"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.rf" "Stein_Ecke1:pasted__file6.rf"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.mu" "Stein_Ecke1:pasted__file6.mu"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.mv" "Stein_Ecke1:pasted__file6.mv"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.s" "Stein_Ecke1:pasted__file6.s"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.wu" "Stein_Ecke1:pasted__file6.wu"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.wv" "Stein_Ecke1:pasted__file6.wv"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.re" "Stein_Ecke1:pasted__file6.re"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.of" "Stein_Ecke1:pasted__file6.of"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.r" "Stein_Ecke1:pasted__file6.ro"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.n" "Stein_Ecke1:pasted__file6.n"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.vt1" "Stein_Ecke1:pasted__file6.vt1"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.vt2" "Stein_Ecke1:pasted__file6.vt2"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.vt3" "Stein_Ecke1:pasted__file6.vt3"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.vc1" "Stein_Ecke1:pasted__file6.vc1"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.o" "Stein_Ecke1:pasted__file6.uv"
+		;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.ofs" "Stein_Ecke1:pasted__file6.fs"
+		;
+connectAttr "Stein_Ecke2:groupParts19.og" "Stein_Ecke2:groupParts20.ig";
+connectAttr "Stein_Ecke2:groupId30.id" "Stein_Ecke2:groupParts20.gi";
+connectAttr "Stein_Ecke2:polyUnite5.out" "Stein_Ecke2:groupParts19.ig";
+connectAttr "Stein_Ecke2:groupId29.id" "Stein_Ecke2:groupParts19.gi";
+connectAttr "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform10|Stein_Ecke2:pasted__Wand_SteinShape.o" "Stein_Ecke2:polyUnite5.ip[0]"
+		;
+connectAttr "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform9|Stein_Ecke2:pasted__Wand_SteinShape.o" "Stein_Ecke2:polyUnite5.ip[1]"
+		;
+connectAttr "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform10|Stein_Ecke2:pasted__Wand_SteinShape.wm" "Stein_Ecke2:polyUnite5.im[0]"
+		;
+connectAttr "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform9|Stein_Ecke2:pasted__Wand_SteinShape.wm" "Stein_Ecke2:polyUnite5.im[1]"
+		;
+connectAttr "Stein_Ecke2:pasted__polyTriangulate2.out" "Stein_Ecke2:groupParts17.ig"
+		;
+connectAttr "Stein_Ecke2:groupId25.id" "Stein_Ecke2:groupParts17.gi";
+connectAttr "Stein_Ecke2:pasted__polyPlanarProj20.out" "Stein_Ecke2:pasted__polyTriangulate2.ip"
+		;
+connectAttr "Stein_Ecke2:pasted__polyPlanarProj19.out" "Stein_Ecke2:pasted__polyPlanarProj20.ip"
+		;
+connectAttr "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform10|Stein_Ecke2:pasted__Wand_SteinShape.wm" "Stein_Ecke2:pasted__polyPlanarProj20.mp"
+		;
+connectAttr "Stein_Ecke2:pasted__polyPlanarProj18.out" "Stein_Ecke2:pasted__polyPlanarProj19.ip"
+		;
+connectAttr "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform10|Stein_Ecke2:pasted__Wand_SteinShape.wm" "Stein_Ecke2:pasted__polyPlanarProj19.mp"
+		;
+connectAttr "Stein_Ecke2:pasted__polyPlanarProj17.out" "Stein_Ecke2:pasted__polyPlanarProj18.ip"
+		;
+connectAttr "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform10|Stein_Ecke2:pasted__Wand_SteinShape.wm" "Stein_Ecke2:pasted__polyPlanarProj18.mp"
+		;
+connectAttr "Stein_Ecke2:pasted__polyCube5.out" "Stein_Ecke2:pasted__polyPlanarProj17.ip"
+		;
+connectAttr "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform10|Stein_Ecke2:pasted__Wand_SteinShape.wm" "Stein_Ecke2:pasted__polyPlanarProj17.mp"
+		;
+connectAttr "Stein_Ecke2:pasted__lambert7.oc" "Stein_Ecke2:pasted__lambert2SG5.ss"
+		;
+connectAttr "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform10|Stein_Ecke2:pasted__Wand_SteinShape.iog.og[0]" "Stein_Ecke2:pasted__lambert2SG5.dsm"
+		 -na;
+connectAttr "|Stein_Ecke2:group13|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform10|Stein_Ecke2:pasted__Wand_SteinShape.ciog.cog[0]" "Stein_Ecke2:pasted__lambert2SG5.dsm"
+		 -na;
+connectAttr "Stein_Ecke2:group13_pasted__Wand_SteinShape.iog.og[0]" "Stein_Ecke2:pasted__lambert2SG5.dsm"
+		 -na;
+connectAttr "EShape3.iog.og[0]" "Stein_Ecke2:pasted__lambert2SG5.dsm" -na;
+connectAttr "Stein_Ecke2:groupId25.msg" "Stein_Ecke2:pasted__lambert2SG5.gn" -na
+		;
+connectAttr "Stein_Ecke2:groupId26.msg" "Stein_Ecke2:pasted__lambert2SG5.gn" -na
+		;
+connectAttr "Stein_Ecke2:groupId29.msg" "Stein_Ecke2:pasted__lambert2SG5.gn" -na
+		;
+connectAttr "Stein_Ecke2:groupId31.msg" "Stein_Ecke2:pasted__lambert2SG5.gn" -na
+		;
+connectAttr "Stein_Ecke2:pasted__lambert2SG5.msg" "Stein_Ecke2:pasted__materialInfo6.sg"
+		;
+connectAttr "Stein_Ecke2:pasted__lambert7.msg" "Stein_Ecke2:pasted__materialInfo6.m"
+		;
+connectAttr "Stein_Ecke2:pasted__file11.msg" "Stein_Ecke2:pasted__materialInfo6.t"
+		 -na;
+connectAttr "Stein_Ecke2:pasted__file11.oc" "Stein_Ecke2:pasted__lambert7.c";
+connectAttr "Stein_Ecke2:pasted__bump2d6.o" "Stein_Ecke2:pasted__lambert7.n";
+connectAttr ":defaultColorMgtGlobals.cme" "Stein_Ecke2:pasted__file11.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Stein_Ecke2:pasted__file11.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Stein_Ecke2:pasted__file11.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Stein_Ecke2:pasted__file11.ws";
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.c" "Stein_Ecke2:pasted__file11.c"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.tf" "Stein_Ecke2:pasted__file11.tf"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.rf" "Stein_Ecke2:pasted__file11.rf"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.mu" "Stein_Ecke2:pasted__file11.mu"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.mv" "Stein_Ecke2:pasted__file11.mv"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.s" "Stein_Ecke2:pasted__file11.s"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.wu" "Stein_Ecke2:pasted__file11.wu"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.wv" "Stein_Ecke2:pasted__file11.wv"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.re" "Stein_Ecke2:pasted__file11.re"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.of" "Stein_Ecke2:pasted__file11.of"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.r" "Stein_Ecke2:pasted__file11.ro"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.n" "Stein_Ecke2:pasted__file11.n"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.vt1" "Stein_Ecke2:pasted__file11.vt1"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.vt2" "Stein_Ecke2:pasted__file11.vt2"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.vt3" "Stein_Ecke2:pasted__file11.vt3"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.vc1" "Stein_Ecke2:pasted__file11.vc1"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.o" "Stein_Ecke2:pasted__file11.uv"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.ofs" "Stein_Ecke2:pasted__file11.fs"
+		;
+connectAttr "Stein_Ecke2:pasted__file12.oa" "Stein_Ecke2:pasted__bump2d6.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "Stein_Ecke2:pasted__file12.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Stein_Ecke2:pasted__file12.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Stein_Ecke2:pasted__file12.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Stein_Ecke2:pasted__file12.ws";
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.c" "Stein_Ecke2:pasted__file12.c"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.tf" "Stein_Ecke2:pasted__file12.tf"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.rf" "Stein_Ecke2:pasted__file12.rf"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.mu" "Stein_Ecke2:pasted__file12.mu"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.mv" "Stein_Ecke2:pasted__file12.mv"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.s" "Stein_Ecke2:pasted__file12.s"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.wu" "Stein_Ecke2:pasted__file12.wu"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.wv" "Stein_Ecke2:pasted__file12.wv"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.re" "Stein_Ecke2:pasted__file12.re"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.of" "Stein_Ecke2:pasted__file12.of"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.r" "Stein_Ecke2:pasted__file12.ro"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.n" "Stein_Ecke2:pasted__file12.n"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.vt1" "Stein_Ecke2:pasted__file12.vt1"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.vt2" "Stein_Ecke2:pasted__file12.vt2"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.vt3" "Stein_Ecke2:pasted__file12.vt3"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.vc1" "Stein_Ecke2:pasted__file12.vc1"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.o" "Stein_Ecke2:pasted__file12.uv"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.ofs" "Stein_Ecke2:pasted__file12.fs"
+		;
+connectAttr "Stein_Ecke2:pasted__polyTriangulate1.out" "Stein_Ecke2:groupParts18.ig"
+		;
+connectAttr "Stein_Ecke2:groupId27.id" "Stein_Ecke2:groupParts18.gi";
+connectAttr "Stein_Ecke2:pasted__polyPlanarProj16.out" "Stein_Ecke2:pasted__polyTriangulate1.ip"
+		;
+connectAttr "Stein_Ecke2:pasted__polyPlanarProj15.out" "Stein_Ecke2:pasted__polyPlanarProj16.ip"
+		;
+connectAttr "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform9|Stein_Ecke2:pasted__Wand_SteinShape.wm" "Stein_Ecke2:pasted__polyPlanarProj16.mp"
+		;
+connectAttr "Stein_Ecke2:pasted__polyPlanarProj14.out" "Stein_Ecke2:pasted__polyPlanarProj15.ip"
+		;
+connectAttr "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform9|Stein_Ecke2:pasted__Wand_SteinShape.wm" "Stein_Ecke2:pasted__polyPlanarProj15.mp"
+		;
+connectAttr "Stein_Ecke2:pasted__polyPlanarProj13.out" "Stein_Ecke2:pasted__polyPlanarProj14.ip"
+		;
+connectAttr "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform9|Stein_Ecke2:pasted__Wand_SteinShape.wm" "Stein_Ecke2:pasted__polyPlanarProj14.mp"
+		;
+connectAttr "Stein_Ecke2:pasted__polyCube4.out" "Stein_Ecke2:pasted__polyPlanarProj13.ip"
+		;
+connectAttr "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform9|Stein_Ecke2:pasted__Wand_SteinShape.wm" "Stein_Ecke2:pasted__polyPlanarProj13.mp"
+		;
+connectAttr "Stein_Ecke2:pasted__lambert6.oc" "Stein_Ecke2:pasted__lambert2SG4.ss"
+		;
+connectAttr "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform9|Stein_Ecke2:pasted__Wand_SteinShape.iog.og[0]" "Stein_Ecke2:pasted__lambert2SG4.dsm"
+		 -na;
+connectAttr "|Stein_Ecke2:group12|Stein_Ecke2:pasted__Wand_Stein|Stein_Ecke2:transform9|Stein_Ecke2:pasted__Wand_SteinShape.ciog.cog[0]" "Stein_Ecke2:pasted__lambert2SG4.dsm"
+		 -na;
+connectAttr "Stein_Ecke2:group13_pasted__Wand_SteinShape.iog.og[1]" "Stein_Ecke2:pasted__lambert2SG4.dsm"
+		 -na;
+connectAttr "EShape3.iog.og[1]" "Stein_Ecke2:pasted__lambert2SG4.dsm" -na;
+connectAttr "Stein_Ecke2:groupId27.msg" "Stein_Ecke2:pasted__lambert2SG4.gn" -na
+		;
+connectAttr "Stein_Ecke2:groupId28.msg" "Stein_Ecke2:pasted__lambert2SG4.gn" -na
+		;
+connectAttr "Stein_Ecke2:groupId30.msg" "Stein_Ecke2:pasted__lambert2SG4.gn" -na
+		;
+connectAttr "Stein_Ecke2:groupId32.msg" "Stein_Ecke2:pasted__lambert2SG4.gn" -na
+		;
+connectAttr "Stein_Ecke2:pasted__lambert2SG4.msg" "Stein_Ecke2:pasted__materialInfo5.sg"
+		;
+connectAttr "Stein_Ecke2:pasted__lambert6.msg" "Stein_Ecke2:pasted__materialInfo5.m"
+		;
+connectAttr "Stein_Ecke2:pasted__file9.msg" "Stein_Ecke2:pasted__materialInfo5.t"
+		 -na;
+connectAttr "Stein_Ecke2:pasted__file9.oc" "Stein_Ecke2:pasted__lambert6.c";
+connectAttr "Stein_Ecke2:pasted__bump2d5.o" "Stein_Ecke2:pasted__lambert6.n";
+connectAttr ":defaultColorMgtGlobals.cme" "Stein_Ecke2:pasted__file9.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Stein_Ecke2:pasted__file9.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Stein_Ecke2:pasted__file9.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Stein_Ecke2:pasted__file9.ws";
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.c" "Stein_Ecke2:pasted__file9.c"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.tf" "Stein_Ecke2:pasted__file9.tf"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.rf" "Stein_Ecke2:pasted__file9.rf"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.mu" "Stein_Ecke2:pasted__file9.mu"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.mv" "Stein_Ecke2:pasted__file9.mv"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.s" "Stein_Ecke2:pasted__file9.s"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.wu" "Stein_Ecke2:pasted__file9.wu"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.wv" "Stein_Ecke2:pasted__file9.wv"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.re" "Stein_Ecke2:pasted__file9.re"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.of" "Stein_Ecke2:pasted__file9.of"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.r" "Stein_Ecke2:pasted__file9.ro"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.n" "Stein_Ecke2:pasted__file9.n"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.vt1" "Stein_Ecke2:pasted__file9.vt1"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.vt2" "Stein_Ecke2:pasted__file9.vt2"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.vt3" "Stein_Ecke2:pasted__file9.vt3"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.vc1" "Stein_Ecke2:pasted__file9.vc1"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.o" "Stein_Ecke2:pasted__file9.uv"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.ofs" "Stein_Ecke2:pasted__file9.fs"
+		;
+connectAttr "Stein_Ecke2:pasted__file10.oa" "Stein_Ecke2:pasted__bump2d5.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "Stein_Ecke2:pasted__file10.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Stein_Ecke2:pasted__file10.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Stein_Ecke2:pasted__file10.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Stein_Ecke2:pasted__file10.ws";
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.c" "Stein_Ecke2:pasted__file10.c"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.tf" "Stein_Ecke2:pasted__file10.tf"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.rf" "Stein_Ecke2:pasted__file10.rf"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.mu" "Stein_Ecke2:pasted__file10.mu"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.mv" "Stein_Ecke2:pasted__file10.mv"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.s" "Stein_Ecke2:pasted__file10.s"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.wu" "Stein_Ecke2:pasted__file10.wu"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.wv" "Stein_Ecke2:pasted__file10.wv"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.re" "Stein_Ecke2:pasted__file10.re"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.of" "Stein_Ecke2:pasted__file10.of"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.r" "Stein_Ecke2:pasted__file10.ro"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.n" "Stein_Ecke2:pasted__file10.n"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.vt1" "Stein_Ecke2:pasted__file10.vt1"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.vt2" "Stein_Ecke2:pasted__file10.vt2"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.vt3" "Stein_Ecke2:pasted__file10.vt3"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.vc1" "Stein_Ecke2:pasted__file10.vc1"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.o" "Stein_Ecke2:pasted__file10.uv"
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.ofs" "Stein_Ecke2:pasted__file10.fs"
+		;
+connectAttr "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke_Einzel:transform12|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.o" "Stein_Ecke_Einzel:polyCBoolOp1.ip[0]"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__Wand_SteinShape.o" "Stein_Ecke_Einzel:polyCBoolOp1.ip[1]"
+		;
+connectAttr "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke_Einzel:transform12|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.wm" "Stein_Ecke_Einzel:polyCBoolOp1.im[0]"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__Wand_SteinShape.wm" "Stein_Ecke_Einzel:polyCBoolOp1.im[1]"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__polyTriangulate3.out" "Stein_Ecke_Einzel:groupParts21.ig"
+		;
+connectAttr "Stein_Ecke_Einzel:groupId31.id" "Stein_Ecke_Einzel:groupParts21.gi"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj24.out" "Stein_Ecke_Einzel:pasted__pasted__polyTriangulate3.ip"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj23.out" "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj24.ip"
+		;
+connectAttr "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke_Einzel:transform12|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.wm" "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj24.mp"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj22.out" "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj23.ip"
+		;
+connectAttr "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke_Einzel:transform12|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.wm" "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj23.mp"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj21.out" "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj22.ip"
+		;
+connectAttr "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke_Einzel:transform12|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.wm" "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj22.mp"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__polyCube6.out" "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj21.ip"
+		;
+connectAttr "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke_Einzel:transform12|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.wm" "Stein_Ecke_Einzel:pasted__pasted__polyPlanarProj21.mp"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__lambert8.oc" "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.ss"
+		;
+connectAttr "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke_Einzel:transform12|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.iog.og[1]" "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.dsm"
+		 -na;
+connectAttr "|Stein_Ecke_Einzel:group15|Stein_Ecke_Einzel:pasted__group14|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke_Einzel:transform12|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.ciog.cog[1]" "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.dsm"
+		 -na;
+connectAttr "|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke2:transform11|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.iog.og[0]" "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.dsm"
+		 -na;
+connectAttr "|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke2:transform11|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.ciog.cog[0]" "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.dsm"
+		 -na;
+connectAttr "EShape3.iog.og[8]" "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.dsm"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:groupId31.msg" "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.gn"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:groupId32.msg" "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.gn"
+		 -na;
+connectAttr "Stein_Ecke2:groupId39.msg" "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.gn"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.msg" "Stein_Ecke_Einzel:pasted__pasted__materialInfo7.sg"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__lambert8.msg" "Stein_Ecke_Einzel:pasted__pasted__materialInfo7.m"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__file13.msg" "Stein_Ecke_Einzel:pasted__pasted__materialInfo7.t"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__file13.oc" "Stein_Ecke_Einzel:pasted__pasted__lambert8.c"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__bump2d7.o" "Stein_Ecke_Einzel:pasted__pasted__lambert8.n"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Stein_Ecke_Einzel:pasted__pasted__file13.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Stein_Ecke_Einzel:pasted__pasted__file13.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Stein_Ecke_Einzel:pasted__pasted__file13.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Stein_Ecke_Einzel:pasted__pasted__file13.ws"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.c" "Stein_Ecke_Einzel:pasted__pasted__file13.c"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.tf" "Stein_Ecke_Einzel:pasted__pasted__file13.tf"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.rf" "Stein_Ecke_Einzel:pasted__pasted__file13.rf"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.mu" "Stein_Ecke_Einzel:pasted__pasted__file13.mu"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.mv" "Stein_Ecke_Einzel:pasted__pasted__file13.mv"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.s" "Stein_Ecke_Einzel:pasted__pasted__file13.s"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.wu" "Stein_Ecke_Einzel:pasted__pasted__file13.wu"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.wv" "Stein_Ecke_Einzel:pasted__pasted__file13.wv"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.re" "Stein_Ecke_Einzel:pasted__pasted__file13.re"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.of" "Stein_Ecke_Einzel:pasted__pasted__file13.of"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.r" "Stein_Ecke_Einzel:pasted__pasted__file13.ro"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.n" "Stein_Ecke_Einzel:pasted__pasted__file13.n"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.vt1" "Stein_Ecke_Einzel:pasted__pasted__file13.vt1"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.vt2" "Stein_Ecke_Einzel:pasted__pasted__file13.vt2"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.vt3" "Stein_Ecke_Einzel:pasted__pasted__file13.vt3"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.vc1" "Stein_Ecke_Einzel:pasted__pasted__file13.vc1"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.o" "Stein_Ecke_Einzel:pasted__pasted__file13.uv"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.ofs" "Stein_Ecke_Einzel:pasted__pasted__file13.fs"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__file14.oa" "Stein_Ecke_Einzel:pasted__pasted__bump2d7.bv"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Stein_Ecke_Einzel:pasted__pasted__file14.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Stein_Ecke_Einzel:pasted__pasted__file14.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Stein_Ecke_Einzel:pasted__pasted__file14.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Stein_Ecke_Einzel:pasted__pasted__file14.ws"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.c" "Stein_Ecke_Einzel:pasted__pasted__file14.c"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.tf" "Stein_Ecke_Einzel:pasted__pasted__file14.tf"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.rf" "Stein_Ecke_Einzel:pasted__pasted__file14.rf"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.mu" "Stein_Ecke_Einzel:pasted__pasted__file14.mu"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.mv" "Stein_Ecke_Einzel:pasted__pasted__file14.mv"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.s" "Stein_Ecke_Einzel:pasted__pasted__file14.s"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.wu" "Stein_Ecke_Einzel:pasted__pasted__file14.wu"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.wv" "Stein_Ecke_Einzel:pasted__pasted__file14.wv"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.re" "Stein_Ecke_Einzel:pasted__pasted__file14.re"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.of" "Stein_Ecke_Einzel:pasted__pasted__file14.of"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.r" "Stein_Ecke_Einzel:pasted__pasted__file14.ro"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.n" "Stein_Ecke_Einzel:pasted__pasted__file14.n"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.vt1" "Stein_Ecke_Einzel:pasted__pasted__file14.vt1"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.vt2" "Stein_Ecke_Einzel:pasted__pasted__file14.vt2"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.vt3" "Stein_Ecke_Einzel:pasted__pasted__file14.vt3"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.vc1" "Stein_Ecke_Einzel:pasted__pasted__file14.vc1"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.o" "Stein_Ecke_Einzel:pasted__pasted__file14.uv"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.ofs" "Stein_Ecke_Einzel:pasted__pasted__file14.fs"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__polyTriangulate3.out" "Stein_Ecke_Einzel:groupParts22.ig"
+		;
+connectAttr "Stein_Ecke_Einzel:groupId33.id" "Stein_Ecke_Einzel:groupParts22.gi"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__polyPlanarProj24.out" "Stein_Ecke_Einzel:pasted__polyTriangulate3.ip"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__polyPlanarProj23.out" "Stein_Ecke_Einzel:pasted__polyPlanarProj24.ip"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__Wand_SteinShape.wm" "Stein_Ecke_Einzel:pasted__polyPlanarProj24.mp"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__polyPlanarProj22.out" "Stein_Ecke_Einzel:pasted__polyPlanarProj23.ip"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__Wand_SteinShape.wm" "Stein_Ecke_Einzel:pasted__polyPlanarProj23.mp"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__polyPlanarProj21.out" "Stein_Ecke_Einzel:pasted__polyPlanarProj22.ip"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__Wand_SteinShape.wm" "Stein_Ecke_Einzel:pasted__polyPlanarProj22.mp"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__polyCube6.out" "Stein_Ecke_Einzel:pasted__polyPlanarProj21.ip"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__Wand_SteinShape.wm" "Stein_Ecke_Einzel:pasted__polyPlanarProj21.mp"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__lambert8.oc" "Stein_Ecke_Einzel:pasted__lambert2SG6.ss"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__Wand_SteinShape.iog.og[1]" "Stein_Ecke_Einzel:pasted__lambert2SG6.dsm"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:pasted__Wand_SteinShape.ciog.cog[1]" "Stein_Ecke_Einzel:pasted__lambert2SG6.dsm"
+		 -na;
+connectAttr "|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke2:transform11|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.iog.og[1]" "Stein_Ecke_Einzel:pasted__lambert2SG6.dsm"
+		 -na;
+connectAttr "EShape3.iog.og[9]" "Stein_Ecke_Einzel:pasted__lambert2SG6.dsm" -na;
+connectAttr "Stein_Ecke_Einzel:groupId33.msg" "Stein_Ecke_Einzel:pasted__lambert2SG6.gn"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:groupId34.msg" "Stein_Ecke_Einzel:pasted__lambert2SG6.gn"
+		 -na;
+connectAttr "Stein_Ecke2:groupId40.msg" "Stein_Ecke_Einzel:pasted__lambert2SG6.gn"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:pasted__lambert2SG6.msg" "Stein_Ecke_Einzel:pasted__materialInfo7.sg"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__lambert8.msg" "Stein_Ecke_Einzel:pasted__materialInfo7.m"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__file13.msg" "Stein_Ecke_Einzel:pasted__materialInfo7.t"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:pasted__file13.oc" "Stein_Ecke_Einzel:pasted__lambert8.c"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__bump2d7.o" "Stein_Ecke_Einzel:pasted__lambert8.n"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Stein_Ecke_Einzel:pasted__file13.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Stein_Ecke_Einzel:pasted__file13.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Stein_Ecke_Einzel:pasted__file13.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Stein_Ecke_Einzel:pasted__file13.ws";
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.c" "Stein_Ecke_Einzel:pasted__file13.c"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.tf" "Stein_Ecke_Einzel:pasted__file13.tf"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.rf" "Stein_Ecke_Einzel:pasted__file13.rf"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.mu" "Stein_Ecke_Einzel:pasted__file13.mu"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.mv" "Stein_Ecke_Einzel:pasted__file13.mv"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.s" "Stein_Ecke_Einzel:pasted__file13.s"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.wu" "Stein_Ecke_Einzel:pasted__file13.wu"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.wv" "Stein_Ecke_Einzel:pasted__file13.wv"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.re" "Stein_Ecke_Einzel:pasted__file13.re"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.of" "Stein_Ecke_Einzel:pasted__file13.of"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.r" "Stein_Ecke_Einzel:pasted__file13.ro"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.n" "Stein_Ecke_Einzel:pasted__file13.n"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.vt1" "Stein_Ecke_Einzel:pasted__file13.vt1"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.vt2" "Stein_Ecke_Einzel:pasted__file13.vt2"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.vt3" "Stein_Ecke_Einzel:pasted__file13.vt3"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.vc1" "Stein_Ecke_Einzel:pasted__file13.vc1"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.o" "Stein_Ecke_Einzel:pasted__file13.uv"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.ofs" "Stein_Ecke_Einzel:pasted__file13.fs"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__file14.oa" "Stein_Ecke_Einzel:pasted__bump2d7.bv"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Stein_Ecke_Einzel:pasted__file14.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Stein_Ecke_Einzel:pasted__file14.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Stein_Ecke_Einzel:pasted__file14.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Stein_Ecke_Einzel:pasted__file14.ws";
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.c" "Stein_Ecke_Einzel:pasted__file14.c"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.tf" "Stein_Ecke_Einzel:pasted__file14.tf"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.rf" "Stein_Ecke_Einzel:pasted__file14.rf"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.mu" "Stein_Ecke_Einzel:pasted__file14.mu"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.mv" "Stein_Ecke_Einzel:pasted__file14.mv"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.s" "Stein_Ecke_Einzel:pasted__file14.s"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.wu" "Stein_Ecke_Einzel:pasted__file14.wu"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.wv" "Stein_Ecke_Einzel:pasted__file14.wv"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.re" "Stein_Ecke_Einzel:pasted__file14.re"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.of" "Stein_Ecke_Einzel:pasted__file14.of"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.r" "Stein_Ecke_Einzel:pasted__file14.ro"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.n" "Stein_Ecke_Einzel:pasted__file14.n"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.vt1" "Stein_Ecke_Einzel:pasted__file14.vt1"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.vt2" "Stein_Ecke_Einzel:pasted__file14.vt2"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.vt3" "Stein_Ecke_Einzel:pasted__file14.vt3"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.vc1" "Stein_Ecke_Einzel:pasted__file14.vc1"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.o" "Stein_Ecke_Einzel:pasted__file14.uv"
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.ofs" "Stein_Ecke_Einzel:pasted__file14.fs"
+		;
+connectAttr "Stein_Ecke2:group13_pasted__Wand_SteinShape.o" "polyUnite4.ip[0]";
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.o" "polyUnite4.ip[1]"
+		;
+connectAttr "|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke2:transform11|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.o" "polyUnite4.ip[2]"
+		;
+connectAttr "Stein_Ecke2:group13_pasted__Wand_SteinShape.wm" "polyUnite4.im[0]";
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.wm" "polyUnite4.im[1]"
+		;
+connectAttr "|Stein_Ecke_Einzel:pasted__pasted__Wand_Stein|Stein_Ecke2:transform11|Stein_Ecke_Einzel:pasted__pasted__Wand_SteinShape.wm" "polyUnite4.im[2]"
+		;
+connectAttr "polyUnite4.out" "Stein_Ecke2:groupParts21.ig";
+connectAttr "Stein_Ecke2:groupId31.id" "Stein_Ecke2:groupParts21.gi";
+connectAttr "Stein_Ecke2:groupParts21.og" "Stein_Ecke2:groupParts22.ig";
+connectAttr "Stein_Ecke2:groupId32.id" "Stein_Ecke2:groupParts22.gi";
+connectAttr "Stein_Ecke2:groupParts22.og" "Stein_Ecke2:groupParts23.ig";
+connectAttr "Stein_Ecke2:groupId33.id" "Stein_Ecke2:groupParts23.gi";
+connectAttr "Stein_Ecke2:groupParts23.og" "Stein_Ecke2:groupParts24.ig";
+connectAttr "Stein_Ecke2:groupId34.id" "Stein_Ecke2:groupParts24.gi";
+connectAttr "Stein_Ecke2:groupParts24.og" "Stein_Ecke2:groupParts25.ig";
+connectAttr "Stein_Ecke2:groupId35.id" "Stein_Ecke2:groupParts25.gi";
+connectAttr "Stein_Ecke2:groupParts25.og" "Stein_Ecke2:groupParts26.ig";
+connectAttr "Stein_Ecke2:groupId36.id" "Stein_Ecke2:groupParts26.gi";
+connectAttr "Stein_Ecke2:groupParts26.og" "Stein_Ecke2:groupParts27.ig";
+connectAttr "Stein_Ecke2:groupId37.id" "Stein_Ecke2:groupParts27.gi";
+connectAttr "Stein_Ecke2:groupParts27.og" "Stein_Ecke2:groupParts28.ig";
+connectAttr "Stein_Ecke2:groupId38.id" "Stein_Ecke2:groupParts28.gi";
+connectAttr "Stein_Ecke2:groupParts28.og" "Stein_Ecke2:groupParts29.ig";
+connectAttr "Stein_Ecke2:groupId39.id" "Stein_Ecke2:groupParts29.gi";
+connectAttr "Stein_Ecke2:groupParts29.og" "Stein_Ecke2:groupParts30.ig";
+connectAttr "Stein_Ecke2:groupId40.id" "Stein_Ecke2:groupParts30.gi";
+connectAttr "Stein_Ecke2:groupParts30.og" "polyTriangulate2.ip";
+connectAttr "pasted__polyPlane1.out" "pasted__polyTriangulate1.ip";
+connectAttr "pasted__polyTriangulate1.out" "deleteComponent1.ig";
 connectAttr "Boden:lambert8SG.pa" ":renderPartition.st" -na;
 connectAttr "Boden:lambert9SG.pa" ":renderPartition.st" -na;
 connectAttr "Boden:pasted__lambert8SG.pa" ":renderPartition.st" -na;
@@ -5860,6 +8538,24 @@ connectAttr "Boden1:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.
 		 -na;
 connectAttr "Stein6:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "Stein7:lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "Boden2:pasted__lambert9SG2.pa" ":renderPartition.st" -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__lambert8SG3.pa" ":renderPartition.st"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG3.pa" ":renderPartition.st"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert8SG4.pa" ":renderPartition.st"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert8SG3.pa" ":renderPartition.st"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__lambert2SG2.pa" ":renderPartition.st" -na;
+connectAttr "Stein_Ecke1:pasted__pasted__lambert2SG2.pa" ":renderPartition.st" -na
+		;
+connectAttr "Stein_Ecke2:pasted__lambert2SG4.pa" ":renderPartition.st" -na;
+connectAttr "Stein_Ecke2:pasted__lambert2SG5.pa" ":renderPartition.st" -na;
+connectAttr "Stein_Ecke_Einzel:pasted__lambert2SG6.pa" ":renderPartition.st" -na
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__lambert2SG6.pa" ":renderPartition.st"
+		 -na;
 connectAttr "Boden:lambert8.msg" ":defaultShaderList1.s" -na;
 connectAttr "Boden:lambert9.msg" ":defaultShaderList1.s" -na;
 connectAttr "Boden:pasted__lambert8.msg" ":defaultShaderList1.s" -na;
@@ -5896,6 +8592,24 @@ connectAttr "Boden1:pasted__pasted__pasted__pasted__pasted__pasted__lambert10.ms
 		 -na;
 connectAttr "Stein6:lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "Stein7:lambert2.msg" ":defaultShaderList1.s" -na;
+connectAttr "Boden2:pasted__lambert13.msg" ":defaultShaderList1.s" -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__lambert10.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert10.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__lambert11.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__lambert10.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__lambert4.msg" ":defaultShaderList1.s" -na;
+connectAttr "Stein_Ecke1:pasted__pasted__lambert4.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "Stein_Ecke2:pasted__lambert6.msg" ":defaultShaderList1.s" -na;
+connectAttr "Stein_Ecke2:pasted__lambert7.msg" ":defaultShaderList1.s" -na;
+connectAttr "Stein_Ecke_Einzel:pasted__lambert8.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__lambert8.msg" ":defaultShaderList1.s"
+		 -na;
 connectAttr "Boden:place2dTexture13.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "Boden:place2dTexture14.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "Boden:place2dTexture15.msg" ":defaultRenderUtilityList1.u" -na;
@@ -5983,6 +8697,55 @@ connectAttr "Stein6:bump2d1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "Stein7:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "Stein7:place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "Stein7:bump2d1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Boden2:pasted__place2dTexture20.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Boden2:pasted__place2dTexture21.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Boden2:pasted__bump2d5.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__place2dTexture15.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture15.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__place2dTexture16.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__place2dTexture15.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__place2dTexture5.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__place2dTexture6.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__bump2d3.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture5.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__pasted__place2dTexture6.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__pasted__bump2d3.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke2:pasted__place2dTexture9.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke2:pasted__place2dTexture10.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke2:pasted__bump2d5.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Stein_Ecke2:pasted__place2dTexture11.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke2:pasted__place2dTexture12.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke2:pasted__bump2d6.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture13.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:pasted__place2dTexture14.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:pasted__bump2d7.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture13.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__place2dTexture14.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__bump2d7.msg" ":defaultRenderUtilityList1.u"
+		 -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Boden:file13.msg" ":defaultTextureList1.tx" -na;
 connectAttr "Boden:file14.msg" ":defaultTextureList1.tx" -na;
@@ -6037,6 +8800,34 @@ connectAttr "Stein6:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "Stein6:file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "Stein7:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "Stein7:file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Boden2:pasted__file20.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Boden2:pasted__file21.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__file15.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__file15.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__file16.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__file15.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "Stein_Ecke1:pasted__file5.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Stein_Ecke1:pasted__file6.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Stein_Ecke1:pasted__pasted__file5.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "Stein_Ecke1:pasted__pasted__file6.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "Stein_Ecke2:pasted__file9.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Stein_Ecke2:pasted__file10.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Stein_Ecke2:pasted__file11.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Stein_Ecke2:pasted__file12.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Stein_Ecke_Einzel:pasted__file13.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__file14.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__file13.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "Stein_Ecke_Einzel:pasted__pasted__file14.msg" ":defaultTextureList1.tx"
+		 -na;
 connectAttr "Boden:pCubeShape3.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "Boden:pCubeShape4.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "Boden:pCubeShape4.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
@@ -6098,6 +8889,22 @@ connectAttr "Boden1:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.
 		 -na;
 connectAttr "EShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "EShape2.iog.og[5]" ":initialShadingGroup.dsm" -na;
+connectAttr "Boden2:pasted__pCubeShape4.iog.og[0]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "Boden2:pasted__pCubeShape4.ciog.cog[0]" ":initialShadingGroup.dsm" 
+		-na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pCubeShape3.ciog.cog[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|Boden2:group11|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform8|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.ciog.cog[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|Boden2:group12|Boden2:pasted__group10|Boden2:pasted__pasted__group8|Boden2:pasted__pasted__pasted__group5|Boden2:pasted__pasted__pasted__pasted__group2|Boden2:pasted__pasted__pasted__pasted__pasted__pCube3|Boden2:transform10|Boden2:pasted__pasted__pasted__pasted__pasted__pCubeShape3.ciog.cog[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape3.ciog.cog[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__pCube3Shape.iog.og[4]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "EShape3.iog.og[6]" ":initialShadingGroup.dsm" -na;
+connectAttr "pasted__EShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "Boden:groupId10.msg" ":initialShadingGroup.gn" -na;
 connectAttr "Boden:groupId11.msg" ":initialShadingGroup.gn" -na;
 connectAttr "Boden:groupId12.msg" ":initialShadingGroup.gn" -na;
@@ -6140,4 +8947,16 @@ connectAttr "Boden1:pasted__pasted__pasted__pasted__pasted__pasted__groupId14.ms
 		 -na;
 connectAttr "Boden1:groupId26.msg" ":initialShadingGroup.gn" -na;
 connectAttr "Stein6:groupId10.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Boden2:pasted__groupId18.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Boden2:pasted__groupId19.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__groupId14.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__groupId14.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__groupId16.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "Boden2:pasted__pasted__pasted__pasted__pasted__pasted__groupId14.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "Boden2:groupId26.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Stein_Ecke2:groupId37.msg" ":initialShadingGroup.gn" -na;
 // End of Boden_Stein.ma

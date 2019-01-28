@@ -1,8 +1,10 @@
 //Maya ASCII 2018 scene
 //Name: Start.ma
-//Last modified: Tue, Jan 15, 2019 04:33:36 PM
+//Last modified: Wed, Jan 23, 2019 04:46:22 PM
 //Codeset: 1252
 requires maya "2018";
+requires -nodeType "type" -nodeType "shellDeformer" -nodeType "vectorAdjust" -nodeType "typeExtrude"
+		 "Type" "2.0a";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -11,6 +13,33 @@ fileInfo "version" "2018";
 fileInfo "cutIdentifier" "201706261615-f9658c4cfc";
 fileInfo "osv" "Microsoft Windows 8 Enterprise Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
+createNode transform -n "group6";
+	rename -uid "5150860D-42B4-B74A-1F72-E29F3DE6DBFB";
+	setAttr ".t" -type "double3" -4 0 0 ;
+	setAttr ".rp" -type "double3" 0 0.5 4.5349587358315233 ;
+	setAttr ".sp" -type "double3" 0 0.5 4.5349587358315233 ;
+createNode transform -n "pasted__typeMesh1" -p "group6";
+	rename -uid "2F976AA9-4B9F-2392-B379-1D8A4C90348D";
+	setAttr ".t" -type "double3" 11.780814424969343 2.9831380682457231 5.0351291994516778 ;
+	setAttr ".s" -type "double3" 0.7 0.7 0.02 ;
+createNode transform -n "transform26" -p "|group6|pasted__typeMesh1";
+	rename -uid "1066B037-4610-5FF7-F801-DFA02BAC2FBF";
+	setAttr ".v" no;
+createNode mesh -n "pasted__typeMeshShape1" -p "transform26";
+	rename -uid "BD5136D5-481E-F94F-0AE1-11B97E397F4C";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 8 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999999266583472 0.491258455789648 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".clst[0].clsn" -type "string" "colorSet1";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "group15";
 	rename -uid "6F9477EE-402A-3BB5-A040-F9A398FA2DFE";
 	setAttr ".rp" -type "double3" 2.1092938038748992 1.75 2.6121270656585693 ;
@@ -327,9 +356,13 @@ createNode transform -n "pasted__Torbogen" -p "group15";
 	setAttr ".t" -type "double3" 4.5 0 0 ;
 	setAttr ".rp" -type "double3" 3.6390081481933585 2.0000000894069672 5 ;
 	setAttr ".sp" -type "double3" 3.6390081481933585 2.0000000894069672 5 ;
-createNode mesh -n "pasted__TorbogenShape" -p "pasted__Torbogen";
+createNode transform -n "transform25" -p "pasted__Torbogen";
+	rename -uid "DFD99D38-4165-9A8A-7D54-A8B5AA9E3E05";
+	setAttr ".v" no;
+createNode mesh -n "pasted__TorbogenShape" -p "transform25";
 	rename -uid "8F122A62-4E3A-F1E8-8787-F1844524EA57";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr -s 14 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -339,6 +372,241 @@ createNode mesh -n "pasted__TorbogenShape" -p "pasted__Torbogen";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "pasted__typeMesh1";
+	rename -uid "72295CC3-4E0F-1780-1D52-C099FDBB89DE";
+	setAttr ".rp" -type "double3" 8.1390081644058228 2.0000001192092896 5 ;
+	setAttr ".sp" -type "double3" 8.1390081644058228 2.0000001192092896 5 ;
+createNode mesh -n "pasted__typeMesh1Shape" -p "|pasted__typeMesh1";
+	rename -uid "3D1621C7-4BBF-9C7B-2500-9E8967DC804A";
+	setAttr -k off ".v";
+	setAttr -s 22 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".ccls" -type "string" "colorSet1";
+	setAttr ".clst[0].clsn" -type "string" "colorSet1";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode groupParts -n "groupParts95";
+	rename -uid "DA98E965-48B6-90F4-6B1D-918042299A04";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[882:921]" "f[1270:1309]";
+createNode groupParts -n "groupParts94";
+	rename -uid "79C9EB96-4200-5D49-AF08-2EB1CD2FDEB6";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[634:693]" "f[822:881]";
+createNode groupParts -n "groupParts93";
+	rename -uid "159FF04C-4DF5-5A5B-4AA7-A6AC11D37E1F";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[1310:1349]";
+createNode groupParts -n "groupParts92";
+	rename -uid "1A777E0A-47AD-0FB2-B70F-EE9BE3A6ABBB";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[962:1089]";
+createNode groupParts -n "groupParts91";
+	rename -uid "2A744546-498B-E66E-0D97-AA8E151D20A2";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[922:961]";
+createNode groupParts -n "groupParts90";
+	rename -uid "E630B00E-4599-A269-7161-A291E95ED1C0";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[694:821]";
+createNode groupParts -n "groupParts89";
+	rename -uid "9764B3B7-43D8-2DA2-F334-6A95B58AF007";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[1090:1269]";
+createNode groupParts -n "groupParts88";
+	rename -uid "4820E813-45FB-D03A-64BC-088D11A1084E";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:633]";
+createNode groupParts -n "groupParts87";
+	rename -uid "F571ECDD-4C65-351C-A086-3F8EDCBE591F";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[0:779]";
+createNode groupParts -n "groupParts86";
+	rename -uid "1184B13A-47FC-8AA0-63D5-F0A5BCA7B5F4";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[0:779]";
+createNode groupParts -n "groupParts85";
+	rename -uid "AEBCBF29-48FE-29F6-4531-9486B7380EE0";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[0:779]";
+createNode polyUnite -n "polyUnite4";
+	rename -uid "9D1231C9-471F-FC73-D627-E58D5DF4DBE2";
+	setAttr -s 2 ".ip";
+	setAttr -s 2 ".im";
+createNode groupParts -n "groupParts84";
+	rename -uid "FF9BB03F-41B3-CB61-E124-37A6711C364C";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:633]";
+createNode shellDeformer -n "pasted__shellDeformer1";
+	rename -uid "5435C8BF-45CE-816D-5DF7-BE841E2373D3";
+	addAttr -s false -ci true -h true -sn "typeMessage" -ln "typeMessage" -at "message";
+	setAttr ".positionInPP" -type "vectorArray" 0 ;
+	setAttr ".scaleInPP" -type "vectorArray" 0 ;
+	setAttr ".rotationInPP" -type "vectorArray" 0 ;
+createNode objectSet -n "pasted__shellDeformer1Set";
+	rename -uid "A589A53B-4E7A-2BE2-2401-158E8AD62A51";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".vo" yes;
+	setAttr -s 2 ".gn";
+createNode groupId -n "pasted__shellDeformer1GroupId";
+	rename -uid "FB4E534E-45F3-C7F0-412C-40AE6D723CEC";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId122";
+	rename -uid "5E191A02-4D54-B234-12E0-60B8B709C710";
+	setAttr ".ihi" 0;
+createNode groupParts -n "pasted__shellDeformer1GroupParts";
+	rename -uid "1362B5CD-4955-E142-6D57-9EAD355C0EBD";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode polyAutoProj -n "pasted__polyAutoProj10";
+	rename -uid "8237F8F4-49F6-1452-DF55-06A2323F91A6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyRemesh -n "pasted__polyRemesh1";
+	rename -uid "BAEA7003-42E1-D965-4B48-FE99C5FBC833";
+	addAttr -s false -ci true -h true -sn "typeMessage" -ln "typeMessage" -at "message";
+	setAttr ".nds" 1;
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".tsb" no;
+	setAttr ".ipt" 0;
+createNode polySoftEdge -n "pasted__polySoftEdge1";
+	rename -uid "A953C658-424E-14CE-FC3E-F1A36F705911";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[*]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode vectorAdjust -n "pasted__vectorAdjust1";
+	rename -uid "357A8A6F-4B03-A839-9F2F-87A13F18278B";
+	setAttr ".extrudeDistanceScalePP" -type "doubleArray" 0 ;
+	setAttr ".boundingBoxes" -type "vectorArray" 10 0.016062378883361816 -0.00594308041036129
+		 0 0.016062378883506537 -0.0059430804101116806 2.4999999999999998e-12 0.18049740791320801
+		 0 0 0.1804974079134104 2.3772321641445161e-13 2.4999999999999998e-12 0.38883098959922791
+		 0 0 0.38883098959944845 2.3772321641445161e-13 2.4999999999999998e-12 0.6438065767288208
+		 0 0 0.64380657672899477 2.3772321641445161e-13 2.4999999999999998e-12 0.82451283931732178
+		 0 0 0.82451283931752417 2.3772321641445161e-13 2.4999999999999998e-12 ;
+createNode objectSet -n "pasted__vectorAdjust1Set";
+	rename -uid "A2D32C2F-4552-3224-3CC8-1B8033B77E26";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".vo" yes;
+	setAttr -s 2 ".gn";
+createNode groupId -n "pasted__vectorAdjust1GroupId";
+	rename -uid "943CB168-4DE0-96FB-177B-7A97924EA17E";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId120";
+	rename -uid "DC2C69BB-4E5B-1E21-5DBD-758FBF48354D";
+	setAttr ".ihi" 0;
+createNode groupParts -n "pasted__vectorAdjust1GroupParts";
+	rename -uid "610C9B16-4B89-E36D-B6B6-0790032CF9ED";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode tweak -n "pasted__tweak1";
+	rename -uid "DB2844F4-4947-1088-6E86-4CB62702CD5F";
+createNode objectSet -n "pasted__tweakSet1";
+	rename -uid "E0826760-4737-ACF9-5A4C-78A80483AA71";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".vo" yes;
+	setAttr -s 2 ".gn";
+createNode groupId -n "pasted__groupId24";
+	rename -uid "2AD20429-4BFC-742A-519E-6396B92FC336";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId121";
+	rename -uid "0DF46198-4AD7-C238-80F0-858D1F4F2885";
+	setAttr ".ihi" 0;
+createNode groupParts -n "pasted__groupParts17";
+	rename -uid "69C1BF09-4958-C85E-9C01-9380C1E7D564";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode typeExtrude -n "pasted__typeExtrude1";
+	rename -uid "BD2C7E30-46C3-D378-3B24-5BA3176B0BF0";
+	addAttr -s false -ci true -h true -sn "typeMessage" -ln "typeMessage" -at "message";
+	setAttr -s 4 ".exc[0:3]"  0 0.5 0.333 0.5 0.66600001 0.5 1 0.5;
+	setAttr -s 4 ".fbc[0:3]"  0 1 0.5 1 1 0.5 1 0;
+	setAttr -s 4 ".bbc[0:3]"  0 1 0.5 1 1 0.5 1 0;
+	setAttr -s 6 ".charGroupId";
+	setAttr ".capComponents" -type "componentList" 6 "f[0]" "f[345:346]" "f[379:380]" "f[425:426]" "f[599:600]" "f[633]";
+	setAttr ".extrusionComponents" -type "componentList" 5 "f[1:344]" "f[347:378]" "f[381:424]" "f[427:598]" "f[601:632]";
+createNode type -n "pasted__type1";
+	rename -uid "0CEC3661-4AE0-C802-19F9-99BDFA30C7DB";
+	setAttr ".solidsPerCharacter" -type "doubleArray" 5 1 1 1 1 1 ;
+	setAttr ".solidsPerWord" -type "doubleArray" 1 5 ;
+	setAttr ".solidsPerLine" -type "doubleArray" 1 5 ;
+	setAttr ".vertsPerChar" -type "doubleArray" 5 86 94 105 148 156 ;
+	setAttr ".characterBoundingBoxesMax" -type "vectorArray" 5 0.16078441962560425
+		 0.24366629827376787 0 0.38288339132316768 0.23772321782806621 0 0.60936746805711672
+		 0.23772321782806621 0 0.81776213815085619 0.23772321782806621 0 1.0268988449351897
+		 0.23772321782806621 0 ;
+	setAttr ".characterBoundingBoxesMin" -type "vectorArray" 5 0.016062379582977446
+		 -0.0059430804457016552 0 0.18049740857765184 0 0 0.38883099638283636 0 0 0.64380656726721042
+		 0 0 0.82451286218967379 0 0 ;
+	setAttr ".manipulatorPivots" -type "vectorArray" 5 0.016062379582977446 -0.0059430804457016552
+		 0 0.18049740857765184 0 0 0.38883099638283636 0 0 0.64380656726721042 0 0 0.82451286218967379
+		 0 0 ;
+	setAttr ".holeInfo" -type "Int32Array" 6 2 3 102 3 19
+		 129 ;
+	setAttr ".numberOfShells" 5;
+	setAttr ".textInput" -type "string" "53 54 41 52 54";
+	setAttr ".currentFont" -type "string" "Lucida Sans Unicode";
+	setAttr ".currentStyle" -type "string" "Regular";
+	setAttr ".manipulatorPositionsPP" -type "vectorArray" 14 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ;
+	setAttr ".manipulatorWordPositionsPP" -type "vectorArray" 1 0 0 0 ;
+	setAttr ".manipulatorLinePositionsPP" -type "vectorArray" 1 0 0 0 ;
+	setAttr ".manipulatorRotationsPP" -type "vectorArray" 14 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ;
+	setAttr ".manipulatorWordRotationsPP" -type "vectorArray" 1 0 0 0 ;
+	setAttr ".manipulatorLineRotationsPP" -type "vectorArray" 1 0 0 0 ;
+	setAttr ".manipulatorScalesPP" -type "vectorArray" 14 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ;
+	setAttr ".manipulatorWordScalesPP" -type "vectorArray" 1 0 0 0 ;
+	setAttr ".manipulatorLineScalesPP" -type "vectorArray" 1 0 0 0 ;
+	setAttr ".alignmentAdjustments" -type "doubleArray" 1 0 ;
+	setAttr ".manipulatorMode" 0;
+	setAttr ".fontSize" 0.40000000596046448;
+createNode groupId -n "pasted__groupid1";
+	rename -uid "8A264311-4724-6A8B-8351-75A6D55ACF4D";
+createNode groupId -n "pasted__groupid2";
+	rename -uid "9E8E8432-493E-AE96-BEE0-AC85E2FD4949";
+createNode groupId -n "pasted__groupid3";
+	rename -uid "B20A1EB0-4D0D-D416-D8C8-8393B0800D00";
+createNode groupId -n "pasted__groupId25";
+	rename -uid "5BE70D72-4D02-7926-B909-90856E4D0AA3";
+createNode groupId -n "pasted__groupId26";
+	rename -uid "D1DDFA71-4579-2854-8FB8-1E9DB5CE0E01";
+createNode groupId -n "pasted__groupId27";
+	rename -uid "0B7B4316-4F50-A23E-E3DD-A2B424382A39";
+createNode groupId -n "pasted__groupId28";
+	rename -uid "1E5103BF-447F-9A58-A272-B6BED3402C21";
+createNode groupId -n "pasted__groupId29";
+	rename -uid "CD5D0EE7-482D-E224-72CB-168AEEB1A40D";
+createNode groupId -n "pasted__groupId30";
+	rename -uid "8BCEFC26-49E1-5FD5-54F5-97A6580C8F50";
+createNode groupId -n "groupId118";
+	rename -uid "3998A242-497B-0A66-A0B5-8E887D48BAE1";
+	setAttr ".ihi" 0;
+createNode shadingEngine -n "pasted__typeBlinnSG";
+	rename -uid "51C2D1E0-4985-01F0-FA03-C6A94CD9DC2C";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 3 ".gn";
+createNode materialInfo -n "pasted__materialInfo20";
+	rename -uid "165FBF7E-43DC-2082-7FC5-6198313408C0";
+createNode blinn -n "pasted__typeBlinn";
+	rename -uid "89F6E7FD-49B6-8F5D-76A9-49807C55885F";
+	setAttr ".c" -type "float3" 1 1 1 ;
+createNode groupId -n "groupId119";
+	rename -uid "8DEF4EC0-4745-2F7B-DFB0-CB99792E4948";
+	setAttr ".ihi" 0;
 createNode polyTriangulate -n "polyTriangulate3";
 	rename -uid "15182F84-4E50-99AE-081B-209456F9BC86";
 	setAttr ".ics" -type "componentList" 1 "f[*]";
@@ -543,9 +811,9 @@ createNode groupId -n "pasted__groupId54";
 createNode shadingEngine -n "pasted__pasted__pasted__pasted__lambert10SG2";
 	rename -uid "67840C3E-491E-A0B0-CC74-54A3986BD1EB";
 	setAttr ".ihi" 0;
-	setAttr -s 3 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 3 ".gn";
+	setAttr -s 4 ".gn";
 createNode materialInfo -n "pasted__pasted__pasted__pasted__materialInfo12";
 	rename -uid "645B880E-4F12-89FC-704F-D4A70F50409D";
 createNode lambert -n "pasted__pasted__pasted__pasted__lambert13";
@@ -693,9 +961,9 @@ createNode groupId -n "pasted__groupId58";
 createNode shadingEngine -n "pasted__pasted__pasted__lambert11SG2";
 	rename -uid "75A3151B-4193-3AFE-31EF-57BA61B5B49B";
 	setAttr ".ihi" 0;
-	setAttr -s 3 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 3 ".gn";
+	setAttr -s 4 ".gn";
 createNode materialInfo -n "pasted__pasted__pasted__materialInfo13";
 	rename -uid "14488AB8-434D-55DB-2F50-F6B71AA43996";
 createNode lambert -n "pasted__pasted__pasted__lambert14";
@@ -733,9 +1001,9 @@ createNode groupId -n "pasted__groupId60";
 createNode shadingEngine -n "pasted__pasted__pasted__pasted__pasted__lambert10SG1";
 	rename -uid "DBFF983C-481B-6F21-D17E-E29C7E6E59BD";
 	setAttr ".ihi" 0;
-	setAttr -s 3 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 3 ".gn";
+	setAttr -s 4 ".gn";
 createNode materialInfo -n "pasted__pasted__pasted__pasted__pasted__materialInfo11";
 	rename -uid "03E725DE-4C72-1D87-6E0D-A1AEA9BC889D";
 createNode lambert -n "pasted__pasted__pasted__pasted__pasted__lambert12";
@@ -853,9 +1121,9 @@ createNode groupId -n "pasted__groupId64";
 createNode shadingEngine -n "pasted__pasted__pasted__pasted__lambert11SG1";
 	rename -uid "49058882-4A36-7751-A932-B5B27C5AEA6D";
 	setAttr ".ihi" 0;
-	setAttr -s 3 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 3 ".gn";
+	setAttr -s 4 ".gn";
 createNode materialInfo -n "pasted__pasted__pasted__pasted__materialInfo13";
 	rename -uid "5E2C2C4E-453B-A22B-5941-9DB246F39B9F";
 createNode lambert -n "pasted__pasted__pasted__pasted__lambert14";
@@ -902,7 +1170,9 @@ createNode groupId -n "groupId88";
 createNode shadingEngine -n "lambert42SG";
 	rename -uid "5DE540C5-4AED-DC77-F57B-928B8095D137";
 	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
 createNode materialInfo -n "materialInfo43";
 	rename -uid "D70E1BA0-4A6D-CCA7-A2E2-999177AF23B4";
 createNode lambert -n "lambert42";
@@ -911,7 +1181,9 @@ createNode lambert -n "lambert42";
 createNode shadingEngine -n "lambert37SG";
 	rename -uid "8F84A8F6-4F49-0CCF-0996-0E91621FF4F6";
 	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
 createNode materialInfo -n "materialInfo38";
 	rename -uid "D4800A3E-4742-E292-B3C1-1E839A2E4FF1";
 createNode lambert -n "lambert37";
@@ -925,7 +1197,9 @@ createNode place2dTexture -n "place2dTexture35";
 createNode shadingEngine -n "lambert40SG";
 	rename -uid "7045EE98-413E-7053-D8E9-238589CA80D4";
 	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
 createNode materialInfo -n "materialInfo41";
 	rename -uid "3987ACF9-4A6D-44E8-209B-B6A7A0743AD3";
 createNode lambert -n "lambert40";
@@ -936,8 +1210,32 @@ createNode file -n "file37";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture37";
 	rename -uid "DD996E8E-4A1C-865A-D555-38B3269E3171";
+createNode groupId -n "groupId123";
+	rename -uid "D83D0947-4A88-E632-C1CE-C7A2A25E389C";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId124";
+	rename -uid "DB422557-4699-3EF6-278E-F89784FB8F58";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId125";
+	rename -uid "19A5A938-4A00-2675-D96A-4CB5A80500DB";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId126";
+	rename -uid "D6D0C79D-4F7B-ACE0-4DE1-A5ACE5B27809";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId127";
+	rename -uid "8266AD22-4C2F-C696-195B-66A2839D9679";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId128";
+	rename -uid "3E9BFE21-4D82-70E9-E5A7-EC91BC5D4003";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId129";
+	rename -uid "EC41D138-47A3-984C-B083-F6BB926EFC4D";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId130";
+	rename -uid "8ECDF5F8-4DC4-A636-6418-83A8975649EF";
+	setAttr ".ihi" 0;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9C967A53-40C5-5A1D-8CDC-5EBBFCC6AA73";
+	rename -uid "AE622CF6-402F-C62E-1F03-2CBF8625E231";
 	setAttr -s 67 ".lnk";
 	setAttr -s 67 ".slnk";
 select -ne :time1;
@@ -962,9 +1260,9 @@ select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
 	setAttr -s 78 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 67 ".dsm";
+	setAttr -s 68 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 60 ".gn";
+	setAttr -s 61 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -974,6 +1272,20 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+connectAttr "groupParts84.og" "pasted__typeMeshShape1.i";
+connectAttr "pasted__vectorAdjust1GroupId.id" "pasted__typeMeshShape1.iog.og[0].gid"
+		;
+connectAttr "pasted__vectorAdjust1Set.mwc" "pasted__typeMeshShape1.iog.og[0].gco"
+		;
+connectAttr "pasted__groupId24.id" "pasted__typeMeshShape1.iog.og[1].gid";
+connectAttr "pasted__tweakSet1.mwc" "pasted__typeMeshShape1.iog.og[1].gco";
+connectAttr "pasted__shellDeformer1GroupId.id" "pasted__typeMeshShape1.iog.og[2].gid"
+		;
+connectAttr "pasted__shellDeformer1Set.mwc" "pasted__typeMeshShape1.iog.og[2].gco"
+		;
+connectAttr "groupId118.id" "pasted__typeMeshShape1.iog.og[3].gid";
+connectAttr "pasted__typeBlinnSG.mwc" "pasted__typeMeshShape1.iog.og[3].gco";
+connectAttr "groupId119.id" "pasted__typeMeshShape1.ciog.cog[0].cgid";
 connectAttr "pasted__groupParts29.og" "|group15|pasted__group3|pasted__pasted__pCube3|pasted__transform16|pasted__pasted__pCubeShape3.i"
 		;
 connectAttr "pasted__groupId56.id" "|group15|pasted__group3|pasted__pasted__pCube3|pasted__transform16|pasted__pasted__pCubeShape3.iog.og[1].gid"
@@ -1075,6 +1387,151 @@ connectAttr "groupId87.id" "pasted__TorbogenShape.iog.og[6].gid";
 connectAttr "lambert37SG.mwc" "pasted__TorbogenShape.iog.og[6].gco";
 connectAttr "groupId88.id" "pasted__TorbogenShape.iog.og[8].gid";
 connectAttr "lambert40SG.mwc" "pasted__TorbogenShape.iog.og[8].gco";
+connectAttr "groupParts95.og" "pasted__typeMesh1Shape.i";
+connectAttr "groupId120.id" "pasted__typeMesh1Shape.iog.og[0].gid";
+connectAttr "pasted__vectorAdjust1Set.mwc" "pasted__typeMesh1Shape.iog.og[0].gco"
+		;
+connectAttr "groupId121.id" "pasted__typeMesh1Shape.iog.og[1].gid";
+connectAttr "pasted__tweakSet1.mwc" "pasted__typeMesh1Shape.iog.og[1].gco";
+connectAttr "groupId122.id" "pasted__typeMesh1Shape.iog.og[2].gid";
+connectAttr "pasted__shellDeformer1Set.mwc" "pasted__typeMesh1Shape.iog.og[2].gco"
+		;
+connectAttr "groupId123.id" "pasted__typeMesh1Shape.iog.og[3].gid";
+connectAttr "pasted__typeBlinnSG.mwc" "pasted__typeMesh1Shape.iog.og[3].gco";
+connectAttr "groupId124.id" "pasted__typeMesh1Shape.iog.og[4].gid";
+connectAttr "lambert42SG.mwc" "pasted__typeMesh1Shape.iog.og[4].gco";
+connectAttr "groupId125.id" "pasted__typeMesh1Shape.iog.og[5].gid";
+connectAttr "pasted__pasted__pasted__pasted__lambert10SG2.mwc" "pasted__typeMesh1Shape.iog.og[5].gco"
+		;
+connectAttr "groupId126.id" "pasted__typeMesh1Shape.iog.og[6].gid";
+connectAttr "pasted__pasted__pasted__lambert11SG2.mwc" "pasted__typeMesh1Shape.iog.og[6].gco"
+		;
+connectAttr "groupId127.id" "pasted__typeMesh1Shape.iog.og[7].gid";
+connectAttr "pasted__pasted__pasted__pasted__pasted__lambert10SG1.mwc" "pasted__typeMesh1Shape.iog.og[7].gco"
+		;
+connectAttr "groupId128.id" "pasted__typeMesh1Shape.iog.og[8].gid";
+connectAttr "pasted__pasted__pasted__pasted__lambert11SG1.mwc" "pasted__typeMesh1Shape.iog.og[8].gco"
+		;
+connectAttr "groupId129.id" "pasted__typeMesh1Shape.iog.og[9].gid";
+connectAttr "lambert37SG.mwc" "pasted__typeMesh1Shape.iog.og[9].gco";
+connectAttr "groupId130.id" "pasted__typeMesh1Shape.iog.og[10].gid";
+connectAttr "lambert40SG.mwc" "pasted__typeMesh1Shape.iog.og[10].gco";
+connectAttr "groupParts94.og" "groupParts95.ig";
+connectAttr "groupId130.id" "groupParts95.gi";
+connectAttr "groupParts93.og" "groupParts94.ig";
+connectAttr "groupId129.id" "groupParts94.gi";
+connectAttr "groupParts92.og" "groupParts93.ig";
+connectAttr "groupId128.id" "groupParts93.gi";
+connectAttr "groupParts91.og" "groupParts92.ig";
+connectAttr "groupId127.id" "groupParts92.gi";
+connectAttr "groupParts90.og" "groupParts91.ig";
+connectAttr "groupId126.id" "groupParts91.gi";
+connectAttr "groupParts89.og" "groupParts90.ig";
+connectAttr "groupId125.id" "groupParts90.gi";
+connectAttr "groupParts88.og" "groupParts89.ig";
+connectAttr "groupId124.id" "groupParts89.gi";
+connectAttr "groupParts87.og" "groupParts88.ig";
+connectAttr "groupId123.id" "groupParts88.gi";
+connectAttr "groupParts86.og" "groupParts87.ig";
+connectAttr "groupId122.id" "groupParts87.gi";
+connectAttr "groupParts85.og" "groupParts86.ig";
+connectAttr "groupId121.id" "groupParts86.gi";
+connectAttr "polyUnite4.out" "groupParts85.ig";
+connectAttr "groupId120.id" "groupParts85.gi";
+connectAttr "pasted__typeMeshShape1.o" "polyUnite4.ip[0]";
+connectAttr "pasted__TorbogenShape.o" "polyUnite4.ip[1]";
+connectAttr "pasted__typeMeshShape1.wm" "polyUnite4.im[0]";
+connectAttr "pasted__TorbogenShape.wm" "polyUnite4.im[1]";
+connectAttr "pasted__shellDeformer1.og[0]" "groupParts84.ig";
+connectAttr "groupId118.id" "groupParts84.gi";
+connectAttr "pasted__shellDeformer1GroupParts.og" "pasted__shellDeformer1.ip[0].ig"
+		;
+connectAttr "pasted__shellDeformer1GroupId.id" "pasted__shellDeformer1.ip[0].gi"
+		;
+connectAttr "pasted__type1.animationPosition" "pasted__shellDeformer1.animationPosition"
+		;
+connectAttr "pasted__type1.animationRotation" "pasted__shellDeformer1.animationRotation"
+		;
+connectAttr "pasted__type1.animationScale" "pasted__shellDeformer1.animationScale"
+		;
+connectAttr "pasted__type1.vertsPerChar" "pasted__shellDeformer1.vertsPerChar";
+connectAttr ":time1.o" "pasted__shellDeformer1.ti";
+connectAttr "pasted__type1.grouping" "pasted__shellDeformer1.grouping";
+connectAttr "pasted__type1.animationMessage" "pasted__shellDeformer1.typeMessage"
+		;
+connectAttr "pasted__typeExtrude1.vertexGroupIds" "pasted__shellDeformer1.vertexGroupIds"
+		;
+connectAttr "pasted__shellDeformer1GroupId.msg" "pasted__shellDeformer1Set.gn" -na
+		;
+connectAttr "groupId122.msg" "pasted__shellDeformer1Set.gn" -na;
+connectAttr "pasted__typeMeshShape1.iog.og[2]" "pasted__shellDeformer1Set.dsm" -na
+		;
+connectAttr "pasted__typeMesh1Shape.iog.og[2]" "pasted__shellDeformer1Set.dsm" -na
+		;
+connectAttr "pasted__shellDeformer1.msg" "pasted__shellDeformer1Set.ub[0]";
+connectAttr "pasted__polyAutoProj10.out" "pasted__shellDeformer1GroupParts.ig";
+connectAttr "pasted__shellDeformer1GroupId.id" "pasted__shellDeformer1GroupParts.gi"
+		;
+connectAttr "pasted__polyRemesh1.out" "pasted__polyAutoProj10.ip";
+connectAttr "pasted__typeMeshShape1.wm" "pasted__polyAutoProj10.mp";
+connectAttr "pasted__polySoftEdge1.out" "pasted__polyRemesh1.ip";
+connectAttr "pasted__typeMeshShape1.wm" "pasted__polyRemesh1.mp";
+connectAttr "pasted__type1.remeshMessage" "pasted__polyRemesh1.typeMessage";
+connectAttr "pasted__typeExtrude1.capComponents" "pasted__polyRemesh1.ics";
+connectAttr "pasted__vectorAdjust1.og[0]" "pasted__polySoftEdge1.ip";
+connectAttr "pasted__typeMeshShape1.wm" "pasted__polySoftEdge1.mp";
+connectAttr "pasted__vectorAdjust1GroupParts.og" "pasted__vectorAdjust1.ip[0].ig"
+		;
+connectAttr "pasted__vectorAdjust1GroupId.id" "pasted__vectorAdjust1.ip[0].gi";
+connectAttr "pasted__type1.grouping" "pasted__vectorAdjust1.grouping";
+connectAttr "pasted__type1.manipulatorTransforms" "pasted__vectorAdjust1.manipulatorTransforms"
+		;
+connectAttr "pasted__type1.alignmentMode" "pasted__vectorAdjust1.alignmentMode";
+connectAttr "pasted__type1.vertsPerChar" "pasted__vectorAdjust1.vertsPerChar";
+connectAttr "pasted__typeExtrude1.vertexGroupIds" "pasted__vectorAdjust1.vertexGroupIds"
+		;
+connectAttr "pasted__vectorAdjust1GroupId.msg" "pasted__vectorAdjust1Set.gn" -na
+		;
+connectAttr "groupId120.msg" "pasted__vectorAdjust1Set.gn" -na;
+connectAttr "pasted__typeMeshShape1.iog.og[0]" "pasted__vectorAdjust1Set.dsm" -na
+		;
+connectAttr "pasted__typeMesh1Shape.iog.og[0]" "pasted__vectorAdjust1Set.dsm" -na
+		;
+connectAttr "pasted__vectorAdjust1.msg" "pasted__vectorAdjust1Set.ub[0]";
+connectAttr "pasted__tweak1.og[0]" "pasted__vectorAdjust1GroupParts.ig";
+connectAttr "pasted__vectorAdjust1GroupId.id" "pasted__vectorAdjust1GroupParts.gi"
+		;
+connectAttr "pasted__groupParts17.og" "pasted__tweak1.ip[0].ig";
+connectAttr "pasted__groupId24.id" "pasted__tweak1.ip[0].gi";
+connectAttr "pasted__groupId24.msg" "pasted__tweakSet1.gn" -na;
+connectAttr "groupId121.msg" "pasted__tweakSet1.gn" -na;
+connectAttr "pasted__typeMeshShape1.iog.og[1]" "pasted__tweakSet1.dsm" -na;
+connectAttr "pasted__typeMesh1Shape.iog.og[1]" "pasted__tweakSet1.dsm" -na;
+connectAttr "pasted__tweak1.msg" "pasted__tweakSet1.ub[0]";
+connectAttr "pasted__typeExtrude1.out" "pasted__groupParts17.ig";
+connectAttr "pasted__groupId24.id" "pasted__groupParts17.gi";
+connectAttr "pasted__type1.vertsPerChar" "pasted__typeExtrude1.vertsPerChar";
+connectAttr "pasted__groupid1.id" "pasted__typeExtrude1.cid";
+connectAttr "pasted__groupid2.id" "pasted__typeExtrude1.bid";
+connectAttr "pasted__groupid3.id" "pasted__typeExtrude1.eid";
+connectAttr "pasted__type1.outputMesh" "pasted__typeExtrude1.in";
+connectAttr "pasted__type1.extrudeMessage" "pasted__typeExtrude1.typeMessage";
+connectAttr "pasted__groupId25.id" "pasted__typeExtrude1.charGroupId" -na;
+connectAttr "pasted__groupId26.id" "pasted__typeExtrude1.charGroupId" -na;
+connectAttr "pasted__groupId27.id" "pasted__typeExtrude1.charGroupId" -na;
+connectAttr "pasted__groupId28.id" "pasted__typeExtrude1.charGroupId" -na;
+connectAttr "pasted__groupId29.id" "pasted__typeExtrude1.charGroupId" -na;
+connectAttr "pasted__groupId30.id" "pasted__typeExtrude1.charGroupId" -na;
+connectAttr "|group6|pasted__typeMesh1.msg" "pasted__type1.transformMessage";
+connectAttr "pasted__typeBlinn.oc" "pasted__typeBlinnSG.ss";
+connectAttr "pasted__typeMeshShape1.iog.og[3]" "pasted__typeBlinnSG.dsm" -na;
+connectAttr "pasted__typeMeshShape1.ciog.cog[0]" "pasted__typeBlinnSG.dsm" -na;
+connectAttr "pasted__typeMesh1Shape.iog.og[3]" "pasted__typeBlinnSG.dsm" -na;
+connectAttr "groupId118.msg" "pasted__typeBlinnSG.gn" -na;
+connectAttr "groupId119.msg" "pasted__typeBlinnSG.gn" -na;
+connectAttr "groupId123.msg" "pasted__typeBlinnSG.gn" -na;
+connectAttr "pasted__typeBlinnSG.msg" "pasted__materialInfo20.sg";
+connectAttr "pasted__typeBlinn.msg" "pasted__materialInfo20.m";
 connectAttr "groupParts58.og" "polyTriangulate3.ip";
 connectAttr "polyPlanarProj9.out" "groupParts58.ig";
 connectAttr "groupId88.id" "groupParts58.gi";
@@ -1170,12 +1627,16 @@ connectAttr "|group15|pasted__group13|pasted__pasted__group11|pasted__pasted__pa
 		 -na;
 connectAttr "pasted__TorbogenShape.iog.og[1]" "pasted__pasted__pasted__pasted__lambert10SG2.dsm"
 		 -na;
+connectAttr "pasted__typeMesh1Shape.iog.og[5]" "pasted__pasted__pasted__pasted__lambert10SG2.dsm"
+		 -na;
 connectAttr "pasted__groupId54.msg" "pasted__pasted__pasted__pasted__lambert10SG2.gn"
 		 -na;
 connectAttr "pasted__groupId55.msg" "pasted__pasted__pasted__pasted__lambert10SG2.gn"
 		 -na;
 connectAttr "pasted__groupId67.msg" "pasted__pasted__pasted__pasted__lambert10SG2.gn"
 		 -na;
+connectAttr "groupId125.msg" "pasted__pasted__pasted__pasted__lambert10SG2.gn" -na
+		;
 connectAttr "pasted__pasted__pasted__pasted__lambert10SG2.msg" "pasted__pasted__pasted__pasted__materialInfo12.sg"
 		;
 connectAttr "pasted__pasted__pasted__pasted__lambert13.msg" "pasted__pasted__pasted__pasted__materialInfo12.m"
@@ -1321,12 +1782,15 @@ connectAttr "|group15|pasted__group11|pasted__pasted__group1|pasted__pasted__pas
 		 -na;
 connectAttr "pasted__TorbogenShape.iog.og[2]" "pasted__pasted__pasted__lambert11SG2.dsm"
 		 -na;
+connectAttr "pasted__typeMesh1Shape.iog.og[6]" "pasted__pasted__pasted__lambert11SG2.dsm"
+		 -na;
 connectAttr "pasted__groupId58.msg" "pasted__pasted__pasted__lambert11SG2.gn" -na
 		;
 connectAttr "pasted__groupId59.msg" "pasted__pasted__pasted__lambert11SG2.gn" -na
 		;
 connectAttr "pasted__groupId68.msg" "pasted__pasted__pasted__lambert11SG2.gn" -na
 		;
+connectAttr "groupId126.msg" "pasted__pasted__pasted__lambert11SG2.gn" -na;
 connectAttr "pasted__pasted__pasted__lambert11SG2.msg" "pasted__pasted__pasted__materialInfo13.sg"
 		;
 connectAttr "pasted__pasted__pasted__lambert14.msg" "pasted__pasted__pasted__materialInfo13.m"
@@ -1430,11 +1894,15 @@ connectAttr "|group15|pasted__group14|pasted__pasted__group13|pasted__pasted__pa
 		 -na;
 connectAttr "pasted__TorbogenShape.iog.og[3]" "pasted__pasted__pasted__pasted__pasted__lambert10SG1.dsm"
 		 -na;
+connectAttr "pasted__typeMesh1Shape.iog.og[7]" "pasted__pasted__pasted__pasted__pasted__lambert10SG1.dsm"
+		 -na;
 connectAttr "pasted__groupId60.msg" "pasted__pasted__pasted__pasted__pasted__lambert10SG1.gn"
 		 -na;
 connectAttr "pasted__groupId61.msg" "pasted__pasted__pasted__pasted__pasted__lambert10SG1.gn"
 		 -na;
 connectAttr "pasted__groupId69.msg" "pasted__pasted__pasted__pasted__pasted__lambert10SG1.gn"
+		 -na;
+connectAttr "groupId127.msg" "pasted__pasted__pasted__pasted__pasted__lambert10SG1.gn"
 		 -na;
 connectAttr "pasted__pasted__pasted__pasted__pasted__lambert10SG1.msg" "pasted__pasted__pasted__pasted__pasted__materialInfo11.sg"
 		;
@@ -1571,12 +2039,16 @@ connectAttr "|group15|pasted__group13|pasted__pasted__group11|pasted__pasted__pa
 		 -na;
 connectAttr "pasted__TorbogenShape.iog.og[4]" "pasted__pasted__pasted__pasted__lambert11SG1.dsm"
 		 -na;
+connectAttr "pasted__typeMesh1Shape.iog.og[8]" "pasted__pasted__pasted__pasted__lambert11SG1.dsm"
+		 -na;
 connectAttr "pasted__groupId64.msg" "pasted__pasted__pasted__pasted__lambert11SG1.gn"
 		 -na;
 connectAttr "pasted__groupId65.msg" "pasted__pasted__pasted__pasted__lambert11SG1.gn"
 		 -na;
 connectAttr "pasted__groupId70.msg" "pasted__pasted__pasted__pasted__lambert11SG1.gn"
 		 -na;
+connectAttr "groupId128.msg" "pasted__pasted__pasted__pasted__lambert11SG1.gn" -na
+		;
 connectAttr "pasted__pasted__pasted__pasted__lambert11SG1.msg" "pasted__pasted__pasted__pasted__materialInfo13.sg"
 		;
 connectAttr "pasted__pasted__pasted__pasted__lambert14.msg" "pasted__pasted__pasted__pasted__materialInfo13.m"
@@ -1679,12 +2151,16 @@ connectAttr "pasted__pasted__pasted__pasted__place2dTexture16.ofs" "pasted__past
 		;
 connectAttr "lambert42.oc" "lambert42SG.ss";
 connectAttr "pasted__TorbogenShape.iog.og[0]" "lambert42SG.dsm" -na;
+connectAttr "pasted__typeMesh1Shape.iog.og[4]" "lambert42SG.dsm" -na;
 connectAttr "pasted__groupId66.msg" "lambert42SG.gn" -na;
+connectAttr "groupId124.msg" "lambert42SG.gn" -na;
 connectAttr "lambert42SG.msg" "materialInfo43.sg";
 connectAttr "lambert42.msg" "materialInfo43.m";
 connectAttr "lambert37.oc" "lambert37SG.ss";
 connectAttr "groupId87.msg" "lambert37SG.gn" -na;
+connectAttr "groupId129.msg" "lambert37SG.gn" -na;
 connectAttr "pasted__TorbogenShape.iog.og[6]" "lambert37SG.dsm" -na;
+connectAttr "pasted__typeMesh1Shape.iog.og[9]" "lambert37SG.dsm" -na;
 connectAttr "lambert37SG.msg" "materialInfo38.sg";
 connectAttr "lambert37.msg" "materialInfo38.m";
 connectAttr "file35.msg" "materialInfo38.t" -na;
@@ -1713,7 +2189,9 @@ connectAttr "place2dTexture35.o" "file35.uv";
 connectAttr "place2dTexture35.ofs" "file35.fs";
 connectAttr "lambert40.oc" "lambert40SG.ss";
 connectAttr "pasted__TorbogenShape.iog.og[8]" "lambert40SG.dsm" -na;
+connectAttr "pasted__typeMesh1Shape.iog.og[10]" "lambert40SG.dsm" -na;
 connectAttr "groupId88.msg" "lambert40SG.gn" -na;
+connectAttr "groupId130.msg" "lambert40SG.gn" -na;
 connectAttr "lambert40SG.msg" "materialInfo41.sg";
 connectAttr "lambert40.msg" "materialInfo41.m";
 connectAttr "file37.msg" "materialInfo41.t" -na;
@@ -1742,6 +2220,7 @@ connectAttr "place2dTexture37.o" "file37.uv";
 connectAttr "place2dTexture37.ofs" "file37.fs";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "pasted__typeBlinnSG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "pasted__pasted__pasted__lambert11SG2.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "pasted__pasted__pasted__pasted__lambert11SG1.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "pasted__pasted__pasted__pasted__lambert10SG2.message" ":defaultLightSet.message";
@@ -1751,6 +2230,7 @@ relationship "link" ":lightLinker1" "lambert40SG.message" ":defaultLightSet.mess
 relationship "link" ":lightLinker1" "lambert42SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "pasted__typeBlinnSG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "pasted__pasted__pasted__lambert11SG2.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "pasted__pasted__pasted__pasted__lambert11SG1.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "pasted__pasted__pasted__pasted__lambert10SG2.message" ":defaultLightSet.message";
@@ -1758,6 +2238,7 @@ relationship "shadowLink" ":lightLinker1" "pasted__pasted__pasted__pasted__paste
 relationship "shadowLink" ":lightLinker1" "lambert37SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert40SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert42SG.message" ":defaultLightSet.message";
+connectAttr "pasted__typeBlinnSG.pa" ":renderPartition.st" -na;
 connectAttr "pasted__pasted__pasted__lambert11SG2.pa" ":renderPartition.st" -na;
 connectAttr "pasted__pasted__pasted__pasted__lambert11SG1.pa" ":renderPartition.st"
 		 -na;
@@ -1768,6 +2249,7 @@ connectAttr "pasted__pasted__pasted__pasted__pasted__lambert10SG1.pa" ":renderPa
 connectAttr "lambert37SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert40SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert42SG.pa" ":renderPartition.st" -na;
+connectAttr "pasted__typeBlinn.msg" ":defaultShaderList1.s" -na;
 connectAttr "pasted__pasted__pasted__lambert14.msg" ":defaultShaderList1.s" -na;
 connectAttr "pasted__pasted__pasted__pasted__lambert14.msg" ":defaultShaderList1.s"
 		 -na;

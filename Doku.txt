@@ -213,3 +213,16 @@ Import
 
 Nav - Modelle
 
+Die Nav Modelle werden für die [TODO] benötigt.
+Für jedes im Kapitel [TODO] definierte Modell gibt es ein eigenes Nav-Modell.
+Die Bezeichnung dieses Nav-Modell beinhaltet die entsprechende Bezeichnung des Modelles + "_nav".
+
+Ein Nav-Modell stellt dabei den "laufbaren" Weg an.
+Das bedeutet im Weg stehende Objekte werden aus diesem Modell entfernt.
+Das Nav-Modell besteht einzig aus Polygon "Plane" und ist eintsprechend des Modells angepasst.
+Hierzu wurden entsprechend Faces entfernt.
+Um den "betretbaren" Weg möglichst genau darstellen zu können wurden über die "Channel Box" die Subdiviosions für die Breite und Länge hochgestellt individuell angepasst.
+Je Höher die Werte sind, in desto mehr Faces wird die Fläche unterteilt. So können auch kleine Bereiche entfernt werden.
+
+Das Nav-Modell wird ebenfalls als .obj Datei exportiert.
+[TODO] Auf die Nav-Modelle wird dann entsprechend anhand der Bezeichnung der einzelnen Modelle aus der Map zugegriffen.

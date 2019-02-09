@@ -210,6 +210,15 @@ Das von Wavefront Technologies entwickelte Format wird von vielen 3D-Grafikprogr
 (Zitat Wikipedia [https://de.wikipedia.org/wiki/Wavefront_OBJ])
 
 Import
+[TODO]
+
+Input - Output Vergleich
+
+Als Input wir die im Kapitel [TODO] definierte Version 2 der Map verwendet.
+
+Nach der Verarbeitung der Datei entsteht dann folgende Map in der Vogelperspektive:
+
+*Bild Output* [TODO]
 
 Nav - Modelle
 

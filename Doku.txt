@@ -1,0 +1,215 @@
+Modelle
+
+Erstellung
+
+Bei der Erstellung der einzelnen Modelle wurde in zwei Phasen vorgegangen.
+In der ersten Phase wurden dabei die einzelnen Elemente erschaffen.
+In der zweiten Phase wurden diese dann zusammengefasst und zu einem Modell zusammengesetzt.
+
+Zuerst wurden die Begrenzungen (Wände / Hecken) und Grundflächen (Rasen) der einzelnen Modelle erstellt.
+Hierzu wurden hauptsächlich die Elemente "Polygon Cube" und "Polygon Cylinder" genutzt.
+Diese wurden dann entsprechend in der Länge, Breite und Höhe angepasst.
+
+Für die detailreicheren Elemente wie beispielsweise die Kerze wurden dann einige Gestaltungsfunktionen angewandt.
+Die Funktion "Extrude" stellt dabei die Größten Anwendungen.
+Die Funktion ermöglicht es einzelne "faces" (Flächen) oder "Edges"(Kanten) nach innen oder außen zu "extrudieren" also zu verschieben / erweitern.
+So wird ein Polygon um ein weiteres polygon erweitert ohne das ein ein neues Polygon benötigt wird.
+
+*Bild Extrude* [https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Maya-Modeling/files/GUID-77FF95F8-13E8-48A6-BF82-84078E1F4FD3-htm.html]
+
+Desweiteren wurde die Funktione "Smooth" (Menüpunkt "Mesh") verwendet um einzelne Übergänge abzurunden.
+Hierzu wurden beispielsweise beim Element "G3" die "runden" Büsche über die Smooth Funktion angepasst.
+
+Um Texturen in die Elemente einzufügen wurden die jeweiligen "Faces" (Flächen) ausgewählt und über rechtsklick (festgehalten) "Assign new Material" ein neues Material hinzugefügt.
+Bei der Materialart wurde "Lambert" ausgewählt. Dies ist auch die Standartart die verwendet wird. "Lambert" zeichnet aus, dass es matte Oberflächen ohne Lichtreflekte darstellt.
+Im "Attribute Editor" erscheind dann ein neuer Reiter für das Angelegte Material.
+Über die Farbe kann dann eine reine Farbe oder eine Datei hinterlegt werden um das Element zu verändern.
+Um die Resultate der Anpassung sehen zu können muss die Option "Textured" im Menü aktiviert sein.
+Über die Eigenschaft "Bump Mapping" kann ebenfalls eine Datei angegeben werden (hier im Projekt wurde immer die gleiche Datei wir bei der Farbe angegeben) um die Tiefe der Grafik zu veranschaulichen.
+
+In Phase wurden dann die einzelnen Modelle erst theoretisch zusammengesetz und aufgeschrieben.
+Im nächsten Schritt wurden dann die einzelnen Elemente zusammengeführt und zu einem Modell kombiniert.
+Die einzelnen Elemente, die ein Modell darstellen müssen dabei zu einem gemeinsameln Element vereint werden.
+Hierzu stellt Autodesk Maya die Funktion "Combine" unter dem Menüpunkt "Mesh" zur Verfügung.
+Anschließend ist darauf zu achten, dass das Modell für die Zeichnung mit OpenGL vorbereitet wird.
+Dafür wird im Menüpunkt "Mesh" die Funktion "Triangulate" auf das ausgewählte Element vorgenommen.
+Danach stehen die Modelle zum Export bereit.
+
+Jedes erstellte Modell besitzt eine definierte Größe von 5x5 Metern (Breite x Länge).
+Die Höhe der Wände und Hecken sind dabei auf 2 Meter gesetzt.
+Die Straßenlaternen hingegen reichen über die Wände und Hecken hinweg.
+Die Abgrenzungen, also die Wände und Hecken sind unterschiedlich Breit, woraus unterschiedlich breite Wege resultieren.
+Die Spielerfigur besitzt dabei eine Größe von 1,50 Metern. 
+
+Bezeichnung
+
+Die Bezeichnung der einzelnen Elemente / Modelle besteht dabei aus zwei Zeichen.
+Die zwei zeichen setzen sich aus einem Buchstaben und einer Zahl zusammen.
+Der Buchstabe gibt dabei an, um welche Art von Modell es sich dabei handelt.
+Hier wird zwischen folgenden Ausprägungen unterschieden:
+
+G = Gerade
+E = Ecke
+K = Kreuzung
+L = Licht
+
+Die Bezeichnung "L" für Licht ist dabei besonders zu beachten.
+Alle Modelle mit der Bezeichnung "L" beinhalten ein Element, welches eine Leuchtfunktion besitzt.
+Hier sind sowohl Geraden, Ecken als auch Kreuzungen zusammengefasst.
+Die zusammenfassung verschiedener Modelle wurde hier gewählt um bei der Verarbeitung der Textdateiinformationen direkt zu unterscheiden, ob es sich um ein Lichtmodell handelt oder nicht.
+
+Die Zahl in jeder Bezeichnung unterscheidet die einzelnen Modelle einer Art.
+Die Kombination aus Buchstabe und Zahl weisend dann auf ein eindeutiges Modell hin.
+
+Modellvariannten
+
+Geraden
+ - G1 (Gerade - Stein)
+ - G2 (Gerade - Holz)
+ - G3 (Gerade - Hecke Rund)
+ - G4 (Gerade - Hecke)
+ - G5 (Gerade - Stein Deko)
+ - G6 (Gerade - Hecke Deko)
+ - G7 (Gerade - Stein Sackgasse)
+ - G8 (Gerade - Ziel)
+ - G9 (Gerade - Start)
+ - L1 (Gerade - Stein Licht)
+ - L2 (Gerade - Holz Licht)
+ - L3 (Gerade - Holz Sackgasse Licht)
+
+Ecken
+ - E1 (Ecke - Stein)
+ - E2 (Ecke - Holz)
+ - L5 (Ecke - Stein Licht)
+ - L6 (Ecke - Holz Licht)
+
+Kreuzungen
+ - K1 (Kreuzung - Stein)
+ - K2 (Kreuzung - Holz)
+ - K3 (T-Kreuzung - Stein)
+ - K4 (Rasen)
+ - L7 (Kreuzung - Stein Licht)
+ - L8 (T-Kreuzung - Holz Licht)
+
+Figuren
+ - F1 (Spielerfigur - Spongebob)
+ - F2 (Verfolger - Kugel)
+
+Map
+
+Allgemein
+
+Die in diesem Projekt verwendete Map besitzt eine Größe von 18x21 Feldern.
+Es wurden dabei zwei Versionen der Map erstellt.
+Die Versionen unterscheiden sich lediglich um das Element "K4".
+Dieses Element ist ein einfaches flachen Rasenelement und füllt lediglich die leeren Felder.
+Durch das Füllen der leeren Felder wird das optische identifizieren der Mapstruktur zwar schwerer bzw. nur noch kaum möglich,
+jedoch wird die zweite Version im Projekt verwendet.
+Aufgrund von Elemente wie beispielsweise Element "G3" war es nötig die leeren Felder zu füllen.
+Durch diese Elemente ist es aufgrund der Form und Eigschanften möglich durchzuschauen.
+Wenn die leeren Felder nun leer sind, wirkt es, als ob das Labyrinth schwebt.
+Um diesen Effekt zu verhindern, werden die leeren Felder mit einem einfachen Rasenelement "K4" gefüllt.
+
+Version 1:
+
+Erste Version, die lediglich das reine Labyrinth beinhaltet.
+Zur optischen Veranschaulichung gut geeignet.
+
+;;;;;;;G80;;;;;;;;
+E10;L11;G51;G53;G41;G41;G61;E23;;;;;;;;
+G10;E20;G60;L61;;;;;;;G70;;L60;G21;G21;E21
+G10;G70;;G30;;;L30;;;;G50;;G62;;;G62
+G50;G72;;G40;;;G52;;L50;G53;E12;;G20;;;G30
+G40;L32;;G30;;;G50;;G40;;;;G60;;;G40
+G30;;;G40;;;K33;G31;K20;G21;G61;G63;L22;;;L32
+E23;G20;G63;L82;G41;E11;G30;;G30;;;;;;;
+;;;;;G10;L83;G31;K10;G71;E10;G41;G41;L31;;
+;;;;;G10;G70;;G10;;G10;;;;;
+;L60;G21;G11;G11;K31;G30;;L12;;E13;G41;K30;G31;G63;L61
+;G60;;;;L11;G30;;K30;G11;L51;;G10;;;G20
+;G30;;;;E13;E12;;G10;;G72;;G10;;;G60
+;G30;;;;;;;G52;;;;E13;G71;;G62
+;G61;;;;;;;G50;;;;;;;G20
+;L81;G21;G21;G63;G41;G41;G51;K10;G53;G41;G41;G63;G21;G21;L81
+;G62;;;;;;;G10;;;;;;;
+;E23;G31;G63;L31;;;;G10;;;;;;;
+;;;;;;;;G90;;;;;;;
+
+Version 2:
+
+Version die aktiv im Projekt genutzt wird.
+Alle leeren Felder aus Version 1 sind hier mit Rasenflächen gefüllt.
+
+K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40
+K40;K40;K40;K40;K40;K40;K40;K40;G80;K40;K40;K40;K40;K40;K40;K40;K40;K40
+K40;E10;L11;G51;G53;G41;G41;G61;E23;K40;K40;K40;K40;K40;K40;K40;K40;K40
+K40;G10;E20;G60;L61;K40;K40;K40;K40;K40;K40;G70;K40;L60;G21;G21;E21;K40
+K40;G10;G70;K40;G30;K40;K40;L30;K40;K40;K40;G50;K40;G62;K40;K40;G62;K40
+K40;G50;G72;K40;G40;K40;K40;G52;K40;L50;G53;E12;K40;G20;K40;K40;G30;K40
+K40;G40;L32;K40;G30;K40;K40;G50;K40;G40;K40;K40;K40;G60;K40;K40;G40;K40
+K40;G30;K40;K40;G40;K40;K40;K33;G31;K20;G21;G61;G63;L22;K40;K40;L32;K40
+K40;E23;G20;G63;L82;G41;E11;G30;K40;G30;K40;K40;K40;K40;K40;K40;K40;K40
+K40;K40;K40;K40;K40;K40;G10;L83;G31;K10;G71;E10;G41;G41;L31;K40;K40;K40
+K40;K40;K40;K40;K40;K40;G10;G70;K40;G10;K40;G10;K40;K40;K40;K40;K40;K40
+K40;K40;L60;G21;G11;G11;K31;G30;K40;L12;K40;E13;G41;K30;G31;G63;L61;K40
+K40;K40;G60;K40;K40;K40;L11;G30;K40;K30;G11;L51;K40;G10;K40;K40;G20;K40
+K40;K40;G30;K40;K40;K40;E13;E12;K40;G10;K40;G72;K40;G10;K40;K40;G60;K40
+K40;K40;G30;K40;K40;K40;K40;K40;K40;G52;K40;K40;K40;E13;G71;K40;G62;K40
+K40;K40;G61;K40;K40;K40;K40;K40;K40;G50;K40;K40;K40;K40;K40;K40;G20;K40
+K40;K40;L81;G21;G21;G63;G41;G41;G51;K10;G53;G41;G41;G63;G21;G21;L81;K40
+K40;K40;G62;K40;K40;K40;K40;K40;K40;G10;K40;K40;K40;K40;K40;K40;K40;K40
+K40;K40;E23;G31;G63;L31;K40;K40;K40;G10;K40;K40;K40;K40;K40;K40;K40;K40
+K40;K40;K40;K40;K40;K40;K40;K40;K40;G90;K40;K40;K40;K40;K40;K40;K40;K40
+K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40;K40
+
+Bezeichnung / Aufbau
+
+Die Textdatei ist simpel aufgebaut. Jedes Feld hat seine eigene Bezeichnung und wird durch ein Simikolon ";" von den anderen Feldern getrennt.
+Jedes Feld wird dann mit eienr Modellbezeichnung, welche auf ein eindeutiges Modell verweist, gefüllt.
+Jede Zeile Beginnt und endet mit einer Feldbezeichnung. lediglich zwischen den Feldern weist ein Simikolon auf ein neues Feld hin.
+Die Bezeichnung jedes einzelnen Feldes ist dabei wie folgt aufgebaut:
+
+Bezeichnung des Modells + Ausrichtung
+
+Der Bezeichnungd es Modells ist dabei wie im kapitel [TODO] beschrieben aufgebaut.
+
+Die Ausrichtung gibt Informationen über die Rotation des einzelnen Modells an.
+Es sind dabei die folgenden vier Ausprägungen der Ausrichtung definiert:
+
+0 =   0 Grad Rotation
+1 =  90 Grad Rotation
+2 = 180 Grad Rotation
+3 = 270 Grad Rotation
+
+Jedes Feld wird somit mit einer drei zeichen Kombination eindeutig beschrieben.
+
+Erstellung
+
+Die Map wurde händisch und einmalig erstellt.
+Zur Vorlage diente dabei eine selbst definierte Zeichnung:
+
+*Bild Map-Zeichnung*
+
+Die Texdatei wird in einem .CSV Dateiformat gespeichert, da die Datei so einfach einzulesen und weiterzuverarbeiten ist.
+
+Export
+
+Vorbereitung
+
+Die einzelnen Modelle wurden für den Export wie folgend beschieben Vorbereitet.
+Es wurde darauf geachtet, dass es sich bei einem Modell um nur ein einziges Element handelt.
+War dies nicht der Fall, mussten entsprechende Schritte die im Kapitel [TODO] beschrieben sind durchgeführt werden.
+Um die Dateigröße zu verkleinern wurde zum Schluss die History des einzelnen Modells gelöscht.
+Hierfür wird, bei ausgewähltem Element, im Menüpunkt "Edit" die Operation "Delete by Type" - "History" ausgewählt.
+
+Exportformat
+
+Jedes Modell wurde im ".obj" Format exportiert.
+"OBJ (oder .obj) ist ein offenes Dateiformat zum Speichern von dreidimensionalen geometrischen Formen.
+Das von Wavefront Technologies entwickelte Format wird von vielen 3D-Grafikprogrammen unterstützt und ist daher geeignet für die programm- und plattformübergreifende Weitergabe von 3D-Modellen." 
+(Zitat Wikipedia [https://de.wikipedia.org/wiki/Wavefront_OBJ])
+
+Import
+
+Nav - Modelle
+

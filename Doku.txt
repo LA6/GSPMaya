@@ -41,6 +41,8 @@ Die Straßenlaternen hingegen reichen über die Wände und Hecken hinweg.
 Die Abgrenzungen, also die Wände und Hecken sind unterschiedlich Breit, woraus unterschiedlich breite Wege resultieren.
 Die Spielerfigur besitzt dabei eine Größe von 1,50 Metern. 
 
+*Beispiel Modell* [TODO]
+
 Bezeichnung
 
 Die Bezeichnung der einzelnen Elemente / Modelle besteht dabei aus zwei Zeichen.
